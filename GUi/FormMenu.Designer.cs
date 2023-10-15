@@ -39,7 +39,7 @@
             this.btnThemTaiKhoan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThemKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnThongTin = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThongTinTaiKhoan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDangXuat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThoat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -142,7 +142,7 @@
             // accordionControlElement6
             // 
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnThongTin,
+            this.btnThongTinTaiKhoan,
             this.btnDangXuat,
             this.btnThoat});
             this.accordionControlElement6.Expanded = true;
@@ -150,12 +150,12 @@
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Tuỳ chọn";
             // 
-            // btnThongTin
+            // btnThongTinTaiKhoan
             // 
-            this.btnThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.Image")));
-            this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThongTin.Text = "Thông tin tài khoản";
+            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.Image")));
+            this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
+            this.btnThongTinTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
             // 
             // btnDangXuat
             // 
@@ -286,7 +286,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemTaiKhoan;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemKhachHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnXeMay;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTin;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTinTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }

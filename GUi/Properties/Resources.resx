@@ -157,14 +157,14 @@
   <data name="switch (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\switch (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="370262345_6511007985688371_4310984424211822500_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\370262345_6511007985688371_4310984424211822500_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="textbox_user_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\textbox_user_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="textbox_user_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_user_23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,9 +177,6 @@
   </data>
   <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="textbox_user_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\textbox_user_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +205,8 @@
   <data name="textbox_user_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_user_19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="textbox_user_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\textbox_user_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textbox_user_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\textbox_user_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="textbox_user_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_user_17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +259,14 @@
   <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="370262345_6511007985688371_4310984424211822500_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\370262345_6511007985688371_4310984424211822500_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textbox_user_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\textbox_user_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textbox_user_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\textbox_user_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hinhanhgioithieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinhanhgioithieu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="textbox_user_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\textbox_user_18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,7 +277,7 @@
   <data name="astronaut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\astronaut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hinhanhgioithieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinhanhgioithieu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

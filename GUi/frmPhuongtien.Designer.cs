@@ -30,28 +30,31 @@
         {
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.cbLoaixe = new System.Windows.Forms.ComboBox();
+            this.cbLoaiXe = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDongia = new System.Windows.Forms.TextBox();
-            this.txtMauxe = new System.Windows.Forms.TextBox();
-            this.txtTenxe = new System.Windows.Forms.TextBox();
-            this.txtMaxe = new System.Windows.Forms.TextBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.txtMau = new System.Windows.Forms.TextBox();
+            this.txtTenXe = new System.Windows.Forms.TextBox();
+            this.txtMaXe = new System.Windows.Forms.TextBox();
             this.dtGVXemay = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTim = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.picXe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picXe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -76,14 +79,14 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // cbLoaixe
+            // cbLoaiXe
             // 
-            this.cbLoaixe.FormattingEnabled = true;
-            this.cbLoaixe.Location = new System.Drawing.Point(110, 217);
-            this.cbLoaixe.Margin = new System.Windows.Forms.Padding(2);
-            this.cbLoaixe.Name = "cbLoaixe";
-            this.cbLoaixe.Size = new System.Drawing.Size(92, 21);
-            this.cbLoaixe.TabIndex = 21;
+            this.cbLoaiXe.FormattingEnabled = true;
+            this.cbLoaiXe.Location = new System.Drawing.Point(110, 217);
+            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2);
+            this.cbLoaiXe.Name = "cbLoaiXe";
+            this.cbLoaiXe.Size = new System.Drawing.Size(92, 21);
+            this.cbLoaiXe.TabIndex = 21;
             // 
             // label5
             // 
@@ -135,37 +138,37 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã xe";
             // 
-            // txtDongia
+            // txtDonGia
             // 
-            this.txtDongia.Location = new System.Drawing.Point(110, 390);
-            this.txtDongia.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDongia.Name = "txtDongia";
-            this.txtDongia.Size = new System.Drawing.Size(76, 20);
-            this.txtDongia.TabIndex = 12;
+            this.txtDonGia.Location = new System.Drawing.Point(110, 390);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(76, 20);
+            this.txtDonGia.TabIndex = 12;
             // 
-            // txtMauxe
+            // txtMau
             // 
-            this.txtMauxe.Location = new System.Drawing.Point(110, 169);
-            this.txtMauxe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMauxe.Name = "txtMauxe";
-            this.txtMauxe.Size = new System.Drawing.Size(76, 20);
-            this.txtMauxe.TabIndex = 13;
+            this.txtMau.Location = new System.Drawing.Point(110, 169);
+            this.txtMau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMau.Name = "txtMau";
+            this.txtMau.Size = new System.Drawing.Size(76, 20);
+            this.txtMau.TabIndex = 13;
             // 
-            // txtTenxe
+            // txtTenXe
             // 
-            this.txtTenxe.Location = new System.Drawing.Point(110, 122);
-            this.txtTenxe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenxe.Name = "txtTenxe";
-            this.txtTenxe.Size = new System.Drawing.Size(76, 20);
-            this.txtTenxe.TabIndex = 14;
+            this.txtTenXe.Location = new System.Drawing.Point(110, 122);
+            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenXe.Name = "txtTenXe";
+            this.txtTenXe.Size = new System.Drawing.Size(76, 20);
+            this.txtTenXe.TabIndex = 14;
             // 
-            // txtMaxe
+            // txtMaXe
             // 
-            this.txtMaxe.Location = new System.Drawing.Point(110, 80);
-            this.txtMaxe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaxe.Name = "txtMaxe";
-            this.txtMaxe.Size = new System.Drawing.Size(76, 20);
-            this.txtMaxe.TabIndex = 15;
+            this.txtMaXe.Location = new System.Drawing.Point(110, 80);
+            this.txtMaXe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaXe.Name = "txtMaXe";
+            this.txtMaXe.Size = new System.Drawing.Size(76, 20);
+            this.txtMaXe.TabIndex = 15;
             // 
             // dtGVXemay
             // 
@@ -176,7 +179,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dtGVXemay.Location = new System.Drawing.Point(272, 80);
+            this.dtGVXemay.Location = new System.Drawing.Point(267, 106);
             this.dtGVXemay.Margin = new System.Windows.Forms.Padding(2);
             this.dtGVXemay.Name = "dtGVXemay";
             this.dtGVXemay.RowHeadersWidth = 51;
@@ -215,14 +218,6 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "THÔNG TIN PHƯƠNG TIỆN";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(110, 261);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 108);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã xe";
@@ -258,34 +253,71 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(264, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Tìm kiếm";
+            // 
+            // txtTim
+            // 
+            this.txtTim.Location = new System.Drawing.Point(319, 80);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(100, 20);
+            this.txtTim.TabIndex = 28;
+            // 
+            // btnTim
+            // 
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Image = global::GUi.Properties.Resources.search;
+            this.btnTim.Location = new System.Drawing.Point(425, 79);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(31, 23);
+            this.btnTim.TabIndex = 29;
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
+            // picXe
+            // 
+            this.picXe.Location = new System.Drawing.Point(110, 261);
+            this.picXe.Name = "picXe";
+            this.picXe.Size = new System.Drawing.Size(140, 108);
+            this.picXe.TabIndex = 25;
+            this.picXe.TabStop = false;
+            // 
             // frmPhuongtien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.txtTim);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picXe);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.cbLoaixe);
+            this.Controls.Add(this.cbLoaiXe);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDongia);
-            this.Controls.Add(this.txtMauxe);
-            this.Controls.Add(this.txtTenxe);
-            this.Controls.Add(this.txtMaxe);
+            this.Controls.Add(this.txtDonGia);
+            this.Controls.Add(this.txtMau);
+            this.Controls.Add(this.txtTenXe);
+            this.Controls.Add(this.txtMaXe);
             this.Controls.Add(this.dtGVXemay);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPhuongtien";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmPhuongtien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,25 +327,28 @@
 
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ComboBox cbLoaixe;
+        private System.Windows.Forms.ComboBox cbLoaiXe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDongia;
-        private System.Windows.Forms.TextBox txtMauxe;
-        private System.Windows.Forms.TextBox txtTenxe;
-        private System.Windows.Forms.TextBox txtMaxe;
+        private System.Windows.Forms.TextBox txtDonGia;
+        private System.Windows.Forms.TextBox txtMau;
+        private System.Windows.Forms.TextBox txtTenXe;
+        private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.DataGridView dtGVXemay;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picXe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTim;
+        private System.Windows.Forms.Button btnTim;
     }
 }
