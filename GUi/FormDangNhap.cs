@@ -18,7 +18,7 @@ namespace GUi
         public FormDangNhap()
         {
             InitializeComponent();
-            location[0] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_1.jpg";
+            /*location[0] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_1.jpg";
             location[1] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_2.jpg";
             location[2] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_4.jpg";
             location[3] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_5.jpg";
@@ -41,19 +41,19 @@ namespace GUi
             location[20] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_22.jpg";
             location[21] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_23.jpg";
             location[22] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_24.jpg";
-            tounage();
+            tounage();*/
         }
 
-        private void tounage()
+        /*private void tounage()
         {
             for (int i = 0; i < 23; i++)
             {
                 Bitmap bitmap = new Bitmap(location[i]);
                 images.Add(bitmap);
             }
-        }
+        }*/
 
-        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
+        /*private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
         {
             if (txtTaiKhoan.Text.Length > 0 && txtTaiKhoan.Text.Length <= 15)
             {
@@ -64,7 +64,7 @@ namespace GUi
                 pictureBox1.Image = Properties.Resources.debut;
             else
                 pictureBox1.Image = images[22];
-        }
+        }*/
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
@@ -73,18 +73,9 @@ namespace GUi
                 this.Close();
         }
 
-        private void txtTaiKhoan_TextChanged_1(object sender, EventArgs e)
-        {
-            if (txtTaiKhoan.Text.Length > 0)
-                pictureBox1.Image = images[txtTaiKhoan.Text.Length - 1];
-            else
-                pictureBox1.Image = Properties.Resources.debut;
-        }
-
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
         {
-            Bitmap bmpass = new Bitmap(@"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_password.png");
-            pictureBox1.Image = bmpass;
+            pictureBox1.Image = Properties.Resources.textbox_password;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)

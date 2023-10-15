@@ -123,9 +123,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\debut.JPG" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\switch.png" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +206,87 @@
       <Project>{0b9b3c28-7b3e-4272-a91c-b6a8b728fd5c}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debut.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_Clicked.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
