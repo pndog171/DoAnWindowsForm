@@ -44,11 +44,12 @@ namespace GUi
 
         }
 
-        private void accordionControlElement5_Click(object sender, EventArgs e)
+        private void accordionControlElement8_Click(object sender, EventArgs e)
         {
-
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Close();
         }
-
     }
 
        
