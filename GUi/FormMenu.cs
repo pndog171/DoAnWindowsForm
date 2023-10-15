@@ -40,8 +40,6 @@ namespace GUi
         {
             frmPhuongtien openxe = new frmPhuongtien();
             openxe.ShowDialog();
-
-
         }
 
         private void accordionControlElement8_Click(object sender, EventArgs e)
@@ -51,10 +49,17 @@ namespace GUi
                 this.Close();
         }
 
-        private void accordionControlElement7_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-
+            FormDangNhap frmdn = new FormDangNhap();
+            DialogResult DR = MessageBox.Show("Bạn có muốn đăng xuất không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+            {
+                this.Hide();
+                frmdn.ShowDialog();
+            }
         }
+
     }
 
        

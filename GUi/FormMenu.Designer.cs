@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.btnXe = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnHoaDon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -48,13 +50,11 @@
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnXeMay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.fluentDesignFormContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -67,6 +67,28 @@
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(475, 449);
             this.fluentDesignFormContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(170)))), ((int)(((byte)(188)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(202, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Gacha Accdicts";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUi.Properties.Resources.hinhanhgioithieu;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(667, 467);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // accordionControl1
             // 
@@ -90,32 +112,32 @@
             // 
             // btnXe
             // 
-            this.btnXe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXeHoi.ImageOptions.Image")));
+            this.btnXe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXe.ImageOptions.Image")));
             this.btnXe.Name = "btnXe";
             this.btnXe.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnXe.Text = "Thong tin xe";
+            this.btnXe.Text = "Thông tin xe";
             this.btnXe.Click += new System.EventHandler(this.btnXeHoi_Click);
             // 
             // btnHoaDon
             // 
-            this.btnHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.btnHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.ImageOptions.Image")));
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnHoaDon.Text = "Hoá đơn";
             // 
             // btnThemTaiKhoan
             // 
-            this.btnThemTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
+            this.btnThemTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTaiKhoan.ImageOptions.Image")));
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
             this.btnThemTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThemTaiKhoan.Text = "Thêm tài khoản";
             // 
             // btnThemKhachHang
             // 
-            this.btnThemKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement10.ImageOptions.Image")));
+            this.btnThemKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemKhachHang.ImageOptions.Image")));
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThemKhachHang.Text = "Thêm khách hàng";
+            this.btnThemKhachHang.Text = "Thông tin khách hàng";
             // 
             // accordionControlElement6
             // 
@@ -130,22 +152,22 @@
             // 
             // btnThongTin
             // 
-            this.btnThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
+            this.btnThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.Image")));
             this.btnThongTin.Name = "btnThongTin";
             this.btnThongTin.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThongTin.Text = "Thông tin tài khoản";
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement7.ImageOptions.Image")));
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.Click += new System.EventHandler(this.accordionControlElement7_Click);
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement8.ImageOptions.Image")));
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThoat.Text = "Thoát";
@@ -222,28 +244,6 @@
             this.btnXeMay.Text = "Xe máy";
             this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUi.Properties.Resources.hinhanhgioithieu;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(667, 467);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(170)))), ((int)(((byte)(188)))));
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(202, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Gacha Accdicts";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,10 +260,10 @@
             this.Text = "FluentDesignForm1";
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.fluentDesignFormContainer1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
