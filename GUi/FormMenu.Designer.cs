@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.btnXeHoi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnXe = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnHoaDon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThemTaiKhoan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThemKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThongTin = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnDangXuat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnThoat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -62,10 +62,10 @@
             this.fluentDesignFormContainer1.Controls.Add(this.label1);
             this.fluentDesignFormContainer1.Controls.Add(this.pictureBox1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(58, 24);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(250, 24);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(5);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(667, 449);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(475, 449);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // accordionControl1
@@ -74,82 +74,82 @@
             this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnXeHoi,
-            this.accordionControlElement5,
-            this.accordionControlElement9,
-            this.accordionControlElement10,
+            this.btnXe,
+            this.btnHoaDon,
+            this.btnThemTaiKhoan,
+            this.btnThemKhachHang,
             this.accordionControlElement6});
             this.accordionControl1.Location = new System.Drawing.Point(0, 24);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
-            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(58, 449);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 449);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
-            // btnXeHoi
+            // btnXe
             // 
-            this.btnXeHoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXeHoi.ImageOptions.Image")));
-            this.btnXeHoi.Name = "btnXeHoi";
-            this.btnXeHoi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnXeHoi.Text = "Thong tin xe";
-            this.btnXeHoi.Click += new System.EventHandler(this.btnXeHoi_Click);
+            this.btnXe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXeHoi.ImageOptions.Image")));
+            this.btnXe.Name = "btnXe";
+            this.btnXe.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnXe.Text = "Thong tin xe";
+            this.btnXe.Click += new System.EventHandler(this.btnXeHoi_Click);
             // 
-            // accordionControlElement5
+            // btnHoaDon
             // 
-            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement5.Text = "Hoá đơn";
+            this.btnHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnHoaDon.Text = "Hoá đơn";
             // 
-            // accordionControlElement9
+            // btnThemTaiKhoan
             // 
-            this.accordionControlElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement9.Text = "Thêm tài khoản";
+            this.btnThemTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
+            this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
+            this.btnThemTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThemTaiKhoan.Text = "Thêm tài khoản";
             // 
-            // accordionControlElement10
+            // btnThemKhachHang
             // 
-            this.accordionControlElement10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement10.ImageOptions.Image")));
-            this.accordionControlElement10.Name = "accordionControlElement10";
-            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement10.Text = "Thêm khách hàng";
+            this.btnThemKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement10.ImageOptions.Image")));
+            this.btnThemKhachHang.Name = "btnThemKhachHang";
+            this.btnThemKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThemKhachHang.Text = "Thêm khách hàng";
             // 
             // accordionControlElement6
             // 
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement11,
-            this.accordionControlElement7,
-            this.accordionControlElement8});
+            this.btnThongTin,
+            this.btnDangXuat,
+            this.btnThoat});
             this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Tuỳ chọn";
             // 
-            // accordionControlElement11
+            // btnThongTin
             // 
-            this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
-            this.accordionControlElement11.Name = "accordionControlElement11";
-            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement11.Text = "Thông tin tài khoản";
+            this.btnThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThongTin.Text = "Thông tin tài khoản";
             // 
-            // accordionControlElement7
+            // btnDangXuat
             // 
-            this.accordionControlElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement7.ImageOptions.Image")));
-            this.accordionControlElement7.Name = "accordionControlElement7";
-            this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Đăng xuất";
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement7.ImageOptions.Image")));
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
-            // accordionControlElement8
+            // btnThoat
             // 
-            this.accordionControlElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement8.ImageOptions.Image")));
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Thoát";
-            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement8.ImageOptions.Image")));
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.accordionControlElement8_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -278,15 +278,15 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnXeHoi;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnXe;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnHoaDon;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDangXuat;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThoat;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemTaiKhoan;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemKhachHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnXeMay;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }

@@ -50,6 +50,11 @@ namespace GUi
             if (DR == DialogResult.Yes)
                 this.Close();
         }
+
+        private void accordionControlElement7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        
