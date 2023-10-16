@@ -59,6 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemTaiKhoan.Designer.cs">
+      <DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinKhachHang.Designer.cs">
+      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPhuongtien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,14 +103,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemTaiKhoan.resx">
+      <DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinKhachHang.resx">
+      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhuongtien.resx">
       <DependentUpon>frmPhuongtien.cs</DependentUpon>
@@ -108,6 +141,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongTinTaiKhoan.resx">
+      <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -121,9 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\debut.JPG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\switch.png" />
@@ -209,6 +242,93 @@
       <Project>{0b9b3c28-7b3e-4272-a91c-b6a8b728fd5c}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debut.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox_user_Clicked.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinhanhgioithieu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

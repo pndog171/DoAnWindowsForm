@@ -40,13 +40,24 @@ namespace GUi
         {
             frmPhuongtien openxe = new frmPhuongtien();
             openxe.ShowDialog();
-
-
         }
 
-        private void accordionControlElement5_Click(object sender, EventArgs e)
+        private void accordionControlElement8_Click(object sender, EventArgs e)
         {
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Close();
+        }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            FormDangNhap frmdn = new FormDangNhap();
+            DialogResult DR = MessageBox.Show("Bạn có muốn đăng xuất không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+            {
+                this.Hide();
+                frmdn.ShowDialog();
+            }
         }
 
     }

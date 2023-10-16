@@ -55,11 +55,11 @@ namespace GUi
         }
         private void getValue() //GETVALUE
         {
-            string selectedTheloaixe = (string)cbLoaixe.SelectedValue;
-            xe.MaXe = txtMaxe.Text;
-            xe.TenXe = txtTenxe.Text;
-            xe.Mau = txtMauxe.Text;
-            xe.DonGia = decimal.Parse(txtDongia.Text);
+            string selectedTheloaixe = (string)cbLoaiXe.SelectedValue;
+            xe.MaXe = txtMaXe.Text;
+            xe.TenXe = txtTenXe.Text;
+            xe.Mau = txtMau.Text;
+            xe.DonGia = decimal.Parse(txtDonGia.Text);
             xe.MaLoai = selectedTheloaixe;
         }
         private void BindGridXeMay(List<Xe> xe) //BINDGRID
@@ -81,15 +81,16 @@ namespace GUi
         private void FillTypeofXeCombobox(List<LoaiXe> loaiXes) //FILL
         {
             loaiXes.Insert(0, new LoaiXe());
-            this.cbLoaixe.DataSource = loaiXes;
-            this.cbLoaixe.DisplayMember = "TenLoai";
-            this.cbLoaixe.ValueMember = "TenLoai";
+            this.cbLoaiXe.DataSource = loaiXes;
+            this.cbLoaiXe.DisplayMember = "TenLoai";
+            this.cbLoaiXe.ValueMember = "TenLoai";
         }
 
         private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
     }
 }
 
