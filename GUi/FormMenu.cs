@@ -25,6 +25,8 @@ namespace GUi
 
         private void btnXeHoi_Click(object sender, EventArgs e)
         {
+            frmPhuongtien openfrm = new frmPhuongtien();
+            openfrm.ShowDialog();
 
         }
 

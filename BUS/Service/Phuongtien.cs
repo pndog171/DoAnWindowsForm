@@ -19,6 +19,11 @@ namespace BUS.Service
             Model1 context = new Model1();
             return context.Xes.FirstOrDefault( p => p.MaXe == id);
         }
+        public List<Xe> FindByName(string name)
+        {
+            Model1 context = new Model1();
+            return context.Xes.Where(p => p.MaXe.ToLower().Contains(name.ToLower())).ToList(); ;
+        }
         public void InsertUpdate(Xe xe)
         {
             Model1 context = new Model1();
