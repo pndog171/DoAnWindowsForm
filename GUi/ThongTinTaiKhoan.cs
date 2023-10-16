@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace GUi
 {
-    public partial class ThongTinTaiKhoan : Form
+    public partial class formThongTinTaiKhoan : Form
     {
-        public ThongTinTaiKhoan()
+        public formThongTinTaiKhoan()
         {
             InitializeComponent();
         }
+
     }
 }
