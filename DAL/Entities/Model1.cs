@@ -8,7 +8,7 @@ namespace DAL.Entities
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -78,6 +78,10 @@ namespace DAL.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<KhachHang>()
+                .Property(e => e.CCCD)
+                .IsFixedLength();
+
+            modelBuilder.Entity<KhachHang>()
                 .HasMany(e => e.ChiTietThues)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
@@ -123,6 +127,11 @@ namespace DAL.Entities
                 .WithRequired(e => e.TaiKhoan)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<TaiKhoan>()
+                .HasMany(e => e.HoaDons)
+                .WithRequired(e => e.TaiKhoan)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Xe>()
                 .Property(e => e.MaXe)
                 .IsFixedLength();
@@ -134,11 +143,6 @@ namespace DAL.Entities
             modelBuilder.Entity<Xe>()
                 .Property(e => e.MaLoai)
                 .IsFixedLength();
-
-            modelBuilder.Entity<Xe>()
-                .HasMany(e => e.ChiTietThues)
-                .WithRequired(e => e.Xe)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Xe>()
                 .HasMany(e => e.HoaDons)

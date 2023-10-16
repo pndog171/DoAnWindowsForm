@@ -12,7 +12,6 @@ namespace DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Xe()
         {
-            ChiTietThues = new HashSet<ChiTietThue>();
             HoaDons = new HashSet<HoaDon>();
         }
 
@@ -35,9 +34,6 @@ namespace DAL.Entities
         public string MaLoai { get; set; }
 
         public string HinhAnh { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietThue> ChiTietThues { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

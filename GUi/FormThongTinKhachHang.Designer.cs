@@ -40,12 +40,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtTenXe = new System.Windows.Forms.TextBox();
             this.txtMaXe = new System.Windows.Forms.TextBox();
-            this.dtGVXemay = new System.Windows.Forms.DataGridView();
-            this.btnTim = new System.Windows.Forms.Button();
+            this.dtGVKhachHang = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).BeginInit();
+            this.btnTim = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTim
@@ -160,30 +160,20 @@
             this.txtMaXe.Size = new System.Drawing.Size(76, 20);
             this.txtMaXe.TabIndex = 55;
             // 
-            // dtGVXemay
+            // dtGVKhachHang
             // 
-            this.dtGVXemay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGVXemay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtGVKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
             this.Column5});
-            this.dtGVXemay.Location = new System.Drawing.Point(267, 106);
-            this.dtGVXemay.Margin = new System.Windows.Forms.Padding(2);
-            this.dtGVXemay.Name = "dtGVXemay";
-            this.dtGVXemay.RowHeadersWidth = 51;
-            this.dtGVXemay.RowTemplate.Height = 24;
-            this.dtGVXemay.Size = new System.Drawing.Size(507, 263);
-            this.dtGVXemay.TabIndex = 50;
-            // 
-            // btnTim
-            // 
-            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTim.Image = global::GUi.Properties.Resources.search;
-            this.btnTim.Location = new System.Drawing.Point(425, 79);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(31, 23);
-            this.btnTim.TabIndex = 69;
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.dtGVKhachHang.Location = new System.Drawing.Point(267, 106);
+            this.dtGVKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.dtGVKhachHang.Name = "dtGVKhachHang";
+            this.dtGVKhachHang.RowHeadersWidth = 51;
+            this.dtGVKhachHang.RowTemplate.Height = 24;
+            this.dtGVKhachHang.Size = new System.Drawing.Size(507, 263);
+            this.dtGVKhachHang.TabIndex = 50;
             // 
             // Column1
             // 
@@ -206,6 +196,16 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
+            // btnTim
+            // 
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Image = global::GUi.Properties.Resources.search;
+            this.btnTim.Location = new System.Drawing.Point(425, 79);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(31, 23);
+            this.btnTim.TabIndex = 69;
+            this.btnTim.UseVisualStyleBackColor = true;
+            // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,10 +224,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtTenXe);
             this.Controls.Add(this.txtMaXe);
-            this.Controls.Add(this.dtGVXemay);
+            this.Controls.Add(this.dtGVKhachHang);
             this.Name = "FormThongTinKhachHang";
             this.Text = "FormThongTinKhachHang";
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).EndInit();
+            this.Load += new System.EventHandler(this.FormThongTinKhachHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVKhachHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,7 +249,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtTenXe;
         private System.Windows.Forms.TextBox txtMaXe;
-        private System.Windows.Forms.DataGridView dtGVXemay;
+        private System.Windows.Forms.DataGridView dtGVKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;

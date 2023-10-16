@@ -32,6 +32,8 @@ namespace DAL.Entities
 
         public virtual KhachHang KhachHang { get; set; }
 
+        public virtual TaiKhoan TaiKhoan { get; set; }
+
         public virtual Xe Xe { get; set; }
     }
 }

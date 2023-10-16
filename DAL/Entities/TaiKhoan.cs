@@ -13,6 +13,7 @@ namespace DAL.Entities
         public TaiKhoan()
         {
             ChiTietThues = new HashSet<ChiTietThue>();
+            HoaDons = new HashSet<HoaDon>();
         }
 
         [Key]
@@ -41,5 +42,8 @@ namespace DAL.Entities
         public virtual ICollection<ChiTietThue> ChiTietThues { get; set; }
 
         public virtual GioiTinh GioiTinh { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }
