@@ -49,6 +49,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -60,21 +66,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(525, 244);
+            this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(517, 251);
+            this.txtTaiKhoan.Multiline = true;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(132, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(125, 20);
             this.txtTaiKhoan.TabIndex = 1;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(525, 320);
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhau.Location = new System.Drawing.Point(517, 328);
+            this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(132, 20);
-            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.Size = new System.Drawing.Size(125, 20);
+            this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // label1
@@ -88,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(453, 248);
+            this.label2.Location = new System.Drawing.Point(453, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
@@ -99,9 +110,9 @@
             this.btnDangKy.BackColor = System.Drawing.Color.White;
             this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDangKy.ForeColor = System.Drawing.Color.Crimson;
-            this.btnDangKy.Location = new System.Drawing.Point(565, 384);
+            this.btnDangKy.Location = new System.Drawing.Point(434, 444);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(75, 23);
+            this.btnDangKy.Size = new System.Drawing.Size(186, 23);
             this.btnDangKy.TabIndex = 3;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
@@ -111,11 +122,11 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.White;
             this.btnDangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDangNhap.CausesValidation = false;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.ForeColor = System.Drawing.Color.Crimson;
-            this.btnDangNhap.Location = new System.Drawing.Point(434, 384);
+            this.btnDangNhap.Location = new System.Drawing.Point(413, 378);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Size = new System.Drawing.Size(236, 23);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
@@ -124,13 +135,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 448);
+            this.panel1.Size = new System.Drawing.Size(243, 480);
             this.panel1.TabIndex = 4;
             // 
             // panel4
@@ -211,7 +223,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(453, 323);
+            this.label5.Location = new System.Drawing.Point(453, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 2;
@@ -230,7 +242,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GUi.Properties.Resources.show;
-            this.pictureBox6.Location = new System.Drawing.Point(663, 314);
+            this.pictureBox6.Location = new System.Drawing.Point(655, 321);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(40, 34);
             this.pictureBox6.TabIndex = 6;
@@ -248,7 +260,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GUi.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(413, 238);
+            this.pictureBox3.Location = new System.Drawing.Point(413, 240);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 30);
             this.pictureBox3.TabIndex = 5;
@@ -258,18 +270,73 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUi.Properties.Resources.debut;
-            this.pictureBox1.Location = new System.Drawing.Point(451, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(449, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 184);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(413, 274);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 1);
+            this.panel5.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(413, 354);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 1);
+            this.panel6.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(514, 414);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "OR";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(502, 432);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(50, 1);
+            this.panel7.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Location = new System.Drawing.Point(13, 443);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(212, 22);
+            this.panel8.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Email : Gachaaddicts@gmail.com";
             // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 479);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
@@ -301,6 +368,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,6 +398,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label8;
     }
 }
 
