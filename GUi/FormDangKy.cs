@@ -25,7 +25,7 @@ namespace GUi
         private void picThoat_Click(object sender, EventArgs e)
         {
             FormDangNhap frmdn = new FormDangNhap();
-            DialogResult DR = MessageBox.Show("Bạn có muốn đăng xuất không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult DR = MessageBox.Show("Bạn có muốn quay lại màn hình đăng nhập không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
             {
                 this.Hide();
