@@ -128,5 +128,33 @@ namespace GUi
 
             
         }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtTaiKhoan.Focus();
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtTaiKhoan.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }

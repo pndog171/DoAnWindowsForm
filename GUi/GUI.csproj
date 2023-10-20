@@ -373,5 +373,14 @@
   <ItemGroup>
     <None Include="Resources\clouds1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logodangky2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\astronaut1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

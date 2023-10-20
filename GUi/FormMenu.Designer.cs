@@ -152,10 +152,11 @@
             // 
             // btnThongTinTaiKhoan
             // 
-            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.Image")));
+            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinTaiKhoan.ImageOptions.Image")));
             this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
             this.btnThongTinTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
+            this.btnThongTinTaiKhoan.Click += new System.EventHandler(this.btnThongTinTaiKhoan_Click);
             // 
             // btnDangXuat
             // 

@@ -39,7 +39,7 @@
             this.btnDangKy = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -76,10 +76,11 @@
             // 
             this.txtTenNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenNguoiDung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTenNguoiDung.Location = new System.Drawing.Point(142, 62);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(142, 19);
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
             this.txtTenNguoiDung.Size = new System.Drawing.Size(143, 13);
             this.txtTenNguoiDung.TabIndex = 1;
+            this.txtTenNguoiDung.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenNguoiDung_KeyDown);
             // 
             // label1
             // 
@@ -104,10 +105,11 @@
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhau.Location = new System.Drawing.Point(142, 19);
+            this.txtMatKhau.Location = new System.Drawing.Point(134, 110);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(143, 13);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // txtNhapLaiMatKhau
             // 
@@ -116,6 +118,7 @@
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(135, 13);
             this.txtNhapLaiMatKhau.TabIndex = 4;
+            this.txtNhapLaiMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNhapLaiMatKhau_KeyDown);
             // 
             // txtEmail
             // 
@@ -124,6 +127,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(175, 13);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
             // 
             // label5
             // 
@@ -174,14 +178,16 @@
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(150, 13);
             this.txtSoDienThoai.TabIndex = 6;
+            this.txtSoDienThoai.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoDienThoai_KeyDown);
             // 
-            // textBox1
+            // txtTenTaiKhoan
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(120, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 13);
-            this.textBox1.TabIndex = 3;
+            this.txtTenTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(134, 62);
+            this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.Size = new System.Drawing.Size(165, 13);
+            this.txtTenTaiKhoan.TabIndex = 3;
+            this.txtTenTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenTaiKhoan_KeyDown);
             // 
             // panel1
             // 
@@ -193,6 +199,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtMatKhau);
+            this.panel1.Controls.Add(this.txtTenTaiKhoan);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox7);
@@ -201,7 +208,6 @@
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtSoDienThoai);
             this.panel1.Controls.Add(this.label5);
@@ -377,7 +383,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(332, 441);
+            this.ClientSize = new System.Drawing.Size(338, 441);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label3);
@@ -388,7 +394,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDangKy";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -420,7 +425,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.PictureBox picThoat;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox6;

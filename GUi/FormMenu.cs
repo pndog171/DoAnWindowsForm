@@ -62,6 +62,12 @@ namespace GUi
             }
         }
 
+        private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
+        {
+            formThongTinTaiKhoan frmdn = new formThongTinTaiKhoan();
+            frmdn.ShowDialog();
+            
+        }
     }
 
        

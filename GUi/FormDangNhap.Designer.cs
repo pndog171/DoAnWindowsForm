@@ -77,6 +77,7 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(125, 20);
             this.txtTaiKhoan.TabIndex = 1;
+            this.txtTaiKhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaiKhoan_KeyDown);
             // 
             // txtMatKhau
             // 
@@ -87,6 +88,7 @@
             this.txtMatKhau.Size = new System.Drawing.Size(125, 20);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // label1
             // 
