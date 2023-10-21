@@ -42,6 +42,7 @@ namespace GUi
             location[21] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_23.jpg";
             location[22] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_24.jpg";
             tounage();*/
+            txtMatKhau.PasswordChar = '*';
         }
 
         /*private void tounage()
@@ -154,6 +155,18 @@ namespace GUi
             {
                 txtTaiKhoan.Focus();
                 e.Handled = true;
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                txtMatKhau.PasswordChar = '\0'; 
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*';
             }
         }
     }
