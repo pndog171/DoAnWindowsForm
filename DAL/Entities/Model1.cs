@@ -8,11 +8,10 @@ namespace DAL.Entities
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model11")
+            : base("name=Model12")
         {
         }
 
-        public virtual DbSet<ChiTietThue> ChiTietThues { get; set; }
         public virtual DbSet<GioiTinh> GioiTinhs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
@@ -22,22 +21,6 @@ namespace DAL.Entities
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietThue>()
-                .Property(e => e.MaCTThue)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ChiTietThue>()
-                .Property(e => e.TenTK)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ChiTietThue>()
-                .Property(e => e.MaXe)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ChiTietThue>()
-                .Property(e => e.MaKH)
-                .IsFixedLength();
-
             modelBuilder.Entity<GioiTinh>()
                 .Property(e => e.MaGioiTinh)
                 .IsFixedLength()
@@ -82,11 +65,6 @@ namespace DAL.Entities
                 .IsFixedLength();
 
             modelBuilder.Entity<KhachHang>()
-                .HasMany(e => e.ChiTietThues)
-                .WithRequired(e => e.KhachHang)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<KhachHang>()
                 .HasMany(e => e.HoaDons)
                 .WithRequired(e => e.KhachHang)
                 .WillCascadeOnDelete(false);
@@ -121,11 +99,6 @@ namespace DAL.Entities
                 .Property(e => e.MaGioiTinh)
                 .IsFixedLength()
                 .IsUnicode(false);
-
-            modelBuilder.Entity<TaiKhoan>()
-                .HasMany(e => e.ChiTietThues)
-                .WithRequired(e => e.TaiKhoan)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
                 .HasMany(e => e.HoaDons)
