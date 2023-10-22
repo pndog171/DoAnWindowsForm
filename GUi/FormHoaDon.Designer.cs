@@ -30,13 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-<<<<<<< Updated upstream
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateNhanXe = new System.Windows.Forms.DateTimePicker();
             this.dateTraXe = new System.Windows.Forms.DateTimePicker();
-=======
->>>>>>> Stashed changes
             this.txtSoNgayThue = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,19 +55,13 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-<<<<<<< Updated upstream
             this.txtHoaDon = new DevExpress.XtraEditors.TextEdit();
-=======
->>>>>>> Stashed changes
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(349, 18);
@@ -78,9 +69,6 @@
             this.label1.Size = new System.Drawing.Size(141, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN";
-            // 
-            // groupBox1
-            // 
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.dateNhanXe);
@@ -110,9 +98,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn mới";
-            // 
-<<<<<<< Updated upstream
-            // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 209);
@@ -144,18 +129,13 @@
             this.dateTraXe.Size = new System.Drawing.Size(200, 20);
             this.dateTraXe.TabIndex = 20;
             // 
-=======
->>>>>>> Stashed changes
             // txtSoNgayThue
             // 
             this.txtSoNgayThue.Location = new System.Drawing.Point(723, 53);
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(44, 20);
             this.txtSoNgayThue.TabIndex = 19;
-<<<<<<< Updated upstream
             this.txtSoNgayThue.TextChanged += new System.EventHandler(this.txtSoNgayThue_TextChanged);
-=======
->>>>>>> Stashed changes
             // 
             // label11
             // 
@@ -196,10 +176,7 @@
             // 
             // txtVAT
             // 
-<<<<<<< Updated upstream
             this.txtVAT.Enabled = false;
-=======
->>>>>>> Stashed changes
             this.txtVAT.Location = new System.Drawing.Point(480, 91);
             this.txtVAT.Name = "txtVAT";
             this.txtVAT.Size = new System.Drawing.Size(40, 20);
@@ -305,8 +282,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã hóa đơn";
             // 
-<<<<<<< Updated upstream
-=======
             // txtHoaDon
             // 
             this.txtHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
@@ -316,7 +291,6 @@
             this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
             this.txtHoaDon.TabIndex = 0;
             // 
->>>>>>> Stashed changes
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(446, 299);
@@ -341,7 +315,6 @@
             this.simpleButton3.TabIndex = 4;
             this.simpleButton3.Text = "Hủy";
             // 
-<<<<<<< Updated upstream
             // txtHoaDon
             // 
             this.txtHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
@@ -351,8 +324,6 @@
             this.txtHoaDon.TabIndex = 0;
             this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
             // 
-=======
->>>>>>> Stashed changes
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

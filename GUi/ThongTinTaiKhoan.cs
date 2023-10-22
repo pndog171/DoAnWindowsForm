@@ -25,10 +25,6 @@ namespace GUi
             if (openFile.ShowDialog() == DialogResult.OK)
             {
 
-                string filePath = openFile.FileName;
-
-
-                pictureBox1.Image = Image.FromFile(filePath);
             }
         }
 
