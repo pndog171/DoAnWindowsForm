@@ -68,6 +68,25 @@ namespace GUi
             frmdn.ShowDialog();
             
         }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            FormHoaDon formHoaDon = new FormHoaDon();
+            formHoaDon.ShowDialog();
+        }
+
+        private void btnThemTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FormThemTaiKhoan formThemTaiKhoan = new FormThemTaiKhoan();
+            formThemTaiKhoan.ShowDialog();
+
+        }
+
+        private void btnThemKhachHang_Click(object sender, EventArgs e)
+        {
+            FormThongTinKhachHang formThongTinKhachHang = new FormThongTinKhachHang();
+            formThongTinKhachHang.ShowDialog();
+        }
     }
 
        

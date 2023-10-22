@@ -55,12 +55,26 @@ namespace GUi
 
             if (e.KeyCode == Keys.Down)
             {
-                txtMatKhau.Focus();
+                cbbgioitinh.Focus();
                 e.Handled = true;
             }
             else if (e.KeyCode == Keys.Up)
             {
                 txtTenNguoiDung.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void cbbgioitinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                txtTenTaiKhoan.Focus();
                 e.Handled = true;
             }
         }
@@ -74,7 +88,7 @@ namespace GUi
             }
             else if (e.KeyCode == Keys.Up)
             {
-                txtMatKhau.Focus();
+                cbbgioitinh.Focus();
                 e.Handled = true;
             }
         }
@@ -120,5 +134,7 @@ namespace GUi
                 e.Handled = true;
             }
         }
+
+        
     }
 }
