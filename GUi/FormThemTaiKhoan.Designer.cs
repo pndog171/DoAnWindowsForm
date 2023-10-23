@@ -53,9 +53,9 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTim = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnTim = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVNV)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,6 +90,7 @@
             this.btnXoa.TabIndex = 43;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label6
             // 
@@ -268,6 +269,7 @@
             this.btnSua.TabIndex = 44;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -294,6 +296,17 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản của nhân viên";
+            // 
+            // btnTim
+            // 
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Image = global::GUi.Properties.Resources.search;
+            this.btnTim.Location = new System.Drawing.Point(178, 22);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(31, 23);
+            this.btnTim.TabIndex = 49;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // groupBox2
             // 
@@ -327,16 +340,6 @@
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin";
-            // 
-            // btnTim
-            // 
-            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTim.Image = global::GUi.Properties.Resources.search;
-            this.btnTim.Location = new System.Drawing.Point(178, 22);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(31, 23);
-            this.btnTim.TabIndex = 49;
-            this.btnTim.UseVisualStyleBackColor = true;
             // 
             // btnThoat
             // 

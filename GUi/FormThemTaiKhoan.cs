@@ -20,38 +20,6 @@ namespace GUi
         {
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormThemTaiKhoan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         //PRIVATE FUNCTION DO NOT TOUCH ANY THINGS IN HERE
 
         private void BindgridN(List<TaiKhoan> account)
@@ -99,9 +67,29 @@ namespace GUi
             tk.TenNguoiDung = txtTenTK.Text;
             tk.SDT = txtSdth.Text;
         }
-        /*private int GetSelectedRow( string nameaccount)
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            for(int n)
-        }*/
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+
+        }
+        /*private int GetSelectedRow( string nameaccount)
+{
+for(int n)
+}*/
     }
 }
