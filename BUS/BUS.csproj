@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\HoaDonService.cs" />
+    <Compile Include="Service\Loaiphuongtien.cs" />
     <Compile Include="Service\TaiKhoanService.cs" />
     <Compile Include="Service\Khachhang.cs" />
-    <Compile Include="Service\Loaiphuongtien.cs" />
     <Compile Include="Service\Phuongtien.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,12 +9,7 @@ namespace BUS.Service
 {
     public class Loaiphuongtien
     {
-        public List<LoaiXe> GetAll(string idLoai)
-        {
-            Model1 context = new Model1();
-            return context.LoaiXes.Where( p => p.MaLoai == idLoai ).ToList();
-        }
-        public List<LoaiXe> GetAllType()
+        public List<LoaiXe> GetAll()
         {
             Model1 context = new Model1();
             return context.LoaiXes.ToList();

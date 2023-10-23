@@ -28,6 +28,23 @@ namespace GUi
         {
             InitializeComponent();
         }
+        private void FormHoaDon_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var listKhachhang = khService.GetAll();
+                var listPhuongtien = ptService.GetAll();
+                var listTaikhoan = tkService.GetAll();
+                FillKhachHangCombobox(listKhachhang);
+                FillNhanVienCombobox(listTaikhoan);
+                FillXeCombobox(listPhuongtien);
+                // txtSoNgayThue.Text = defaultValue;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         //combobox Ten nhan vien
         private void FillNhanVienCombobox(List<TaiKhoan> listNhanViens)
         {
@@ -58,23 +75,6 @@ namespace GUi
 
         }
 
-        private void FormHoaDon_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                var listKhachhang = khService.GetAll();
-                var listPhuongtien = ptService.GetAll();
-                var listTaikhoan = tkService.GetAll();
-                FillKhachHangCombobox(listKhachhang);
-                FillNhanVienCombobox(listTaikhoan);
-                FillXeCombobox(listPhuongtien);
-               // txtSoNgayThue.Text = defaultValue;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void getValue()
         {
