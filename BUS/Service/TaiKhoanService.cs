@@ -15,6 +15,13 @@ namespace BUS.Service
             Model1 context = new Model1();
             return context.TaiKhoans.ToList();
         }
+        public List<TaiKhoan> FindByName(string name)
+        {
+         
+                Model1 context = new Model1();
+                return context.TaiKhoans.Where(p => p.TenNguoiDung.ToLower().Contains(name.ToLower())).ToList();
+            
+        }
         public void InsertUpdate(TaiKhoan item)
         {
             Model1 context = new Model1();

@@ -236,5 +236,15 @@ namespace GUi
                 MessageBox.Show("Xóa thành công!");
             }
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+                BindgridN(tksv.GetAll());
+            else
+            {
+                BindgridN(tksv.FindByName(txtTim.Text));
+            }
+        }
     }
 }
