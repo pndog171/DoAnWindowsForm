@@ -165,6 +165,7 @@
             this.btnDangKy.TabIndex = 9;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click_1);
             // 
             // label7
             // 
@@ -439,6 +440,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDangKy";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormDangKy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
