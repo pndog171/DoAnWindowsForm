@@ -41,8 +41,6 @@
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbbgioitinh = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -165,6 +163,7 @@
             this.btnDangKy.TabIndex = 9;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click_1);
             // 
             // label7
             // 
@@ -197,8 +196,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cbbgioitinh);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.panel7);
@@ -229,25 +226,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 350);
             this.panel1.TabIndex = 15;
-            // 
-            // cbbgioitinh
-            // 
-            this.cbbgioitinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbgioitinh.FormattingEnabled = true;
-            this.cbbgioitinh.Location = new System.Drawing.Point(116, 120);
-            this.cbbgioitinh.Name = "cbbgioitinh";
-            this.cbbgioitinh.Size = new System.Drawing.Size(173, 21);
-            this.cbbgioitinh.TabIndex = 22;
-            this.cbbgioitinh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbbgioitinh_KeyDown);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Giới Tính :";
             // 
             // panel8
             // 
@@ -439,6 +417,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDangKy";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormDangKy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -490,8 +469,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ComboBox cbbgioitinh;
     }
 }

@@ -12,6 +12,7 @@ namespace DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TaiKhoan()
         {
+            ChiTietThues = new HashSet<ChiTietThue>();
             HoaDons = new HashSet<HoaDon>();
         }
 
@@ -33,11 +34,8 @@ namespace DAL.Entities
         [StringLength(20)]
         public string SDT { get; set; }
 
-        [Required]
-        [StringLength(1)]
-        public string MaGioiTinh { get; set; }
-
-        public virtual GioiTinh GioiTinh { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietThue> ChiTietThues { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

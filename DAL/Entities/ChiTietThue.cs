@@ -6,25 +6,24 @@ namespace DAL.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("HoaDon")]
-    public partial class HoaDon
+    [Table("ChiTietThue")]
+    public partial class ChiTietThue
     {
         [Key]
         [StringLength(10)]
-        public string MaHD { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string MaXe { get; set; }
-
-        [Column(TypeName = "numeric")]
-        public decimal TongTien { get; set; }
+        public string MaCTThue { get; set; }
 
         [Required]
         [StringLength(23)]
         public string TenTK { get; set; }
 
-        public DateTime NgayThanhToan { get; set; }
+        public DateTime NgayThue { get; set; }
+
+        public DateTime NgayTra { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string MaXe { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -33,7 +32,5 @@ namespace DAL.Entities
         public virtual KhachHang KhachHang { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
-
-        public virtual Xe Xe { get; set; }
     }
 }

@@ -36,25 +36,22 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMau = new System.Windows.Forms.TextBox();
-            this.txtTenXe = new System.Windows.Forms.TextBox();
-            this.txtMaXe = new System.Windows.Forms.TextBox();
-            this.dtGVXemay = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmailNV = new System.Windows.Forms.TextBox();
+            this.txtMatkhauNV = new System.Windows.Forms.TextBox();
+            this.txtTenTKNV = new System.Windows.Forms.TextBox();
+            this.dtGVNhanVien = new System.Windows.Forms.DataGridView();
+            this.txtSdt = new System.Windows.Forms.TextBox();
+            this.txtHoTenNV = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTim
@@ -66,6 +63,7 @@
             this.btnTim.Size = new System.Drawing.Size(31, 23);
             this.btnTim.TabIndex = 49;
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTim
             // 
@@ -102,6 +100,7 @@
             this.btnSua.TabIndex = 44;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -113,6 +112,7 @@
             this.btnXoa.TabIndex = 43;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -124,6 +124,7 @@
             this.btnThem.TabIndex = 42;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label6
             // 
@@ -134,17 +135,6 @@
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 37;
             this.label6.Text = "Số điện thoại";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 337);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Giới tính";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -186,72 +176,63 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Tên tài khoản";
             // 
-            // txtMau
+            // txtEmailNV
             // 
-            this.txtMau.Location = new System.Drawing.Point(124, 198);
-            this.txtMau.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMau.Name = "txtMau";
-            this.txtMau.Size = new System.Drawing.Size(76, 20);
-            this.txtMau.TabIndex = 32;
+            this.txtEmailNV.Location = new System.Drawing.Point(124, 198);
+            this.txtEmailNV.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmailNV.Name = "txtEmailNV";
+            this.txtEmailNV.Size = new System.Drawing.Size(76, 20);
+            this.txtEmailNV.TabIndex = 32;
             // 
-            // txtTenXe
+            // txtMatkhauNV
             // 
-            this.txtTenXe.Location = new System.Drawing.Point(124, 151);
-            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenXe.Name = "txtTenXe";
-            this.txtTenXe.Size = new System.Drawing.Size(76, 20);
-            this.txtTenXe.TabIndex = 33;
+            this.txtMatkhauNV.Location = new System.Drawing.Point(124, 151);
+            this.txtMatkhauNV.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMatkhauNV.Name = "txtMatkhauNV";
+            this.txtMatkhauNV.Size = new System.Drawing.Size(76, 20);
+            this.txtMatkhauNV.TabIndex = 33;
             // 
-            // txtMaXe
+            // txtTenTKNV
             // 
-            this.txtMaXe.Location = new System.Drawing.Point(124, 109);
-            this.txtMaXe.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaXe.Name = "txtMaXe";
-            this.txtMaXe.Size = new System.Drawing.Size(76, 20);
-            this.txtMaXe.TabIndex = 34;
+            this.txtTenTKNV.Location = new System.Drawing.Point(124, 109);
+            this.txtTenTKNV.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenTKNV.Name = "txtTenTKNV";
+            this.txtTenTKNV.Size = new System.Drawing.Size(76, 20);
+            this.txtTenTKNV.TabIndex = 34;
             // 
-            // dtGVXemay
+            // dtGVNhanVien
             // 
-            this.dtGVXemay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGVXemay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtGVNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dtGVXemay.Location = new System.Drawing.Point(267, 106);
-            this.dtGVXemay.Margin = new System.Windows.Forms.Padding(2);
-            this.dtGVXemay.Name = "dtGVXemay";
-            this.dtGVXemay.RowHeadersWidth = 51;
-            this.dtGVXemay.RowTemplate.Height = 24;
-            this.dtGVXemay.Size = new System.Drawing.Size(507, 263);
-            this.dtGVXemay.TabIndex = 30;
+            this.Column5});
+            this.dtGVNhanVien.Location = new System.Drawing.Point(267, 106);
+            this.dtGVNhanVien.Margin = new System.Windows.Forms.Padding(2);
+            this.dtGVNhanVien.Name = "dtGVNhanVien";
+            this.dtGVNhanVien.RowHeadersWidth = 51;
+            this.dtGVNhanVien.RowTemplate.Height = 24;
+            this.dtGVNhanVien.Size = new System.Drawing.Size(507, 263);
+            this.dtGVNhanVien.TabIndex = 30;
+            this.dtGVNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVNhanVien_CellContentClick);
             // 
-            // comboBox1
+            // txtSdt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 334);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 41;
+            this.txtSdt.Location = new System.Drawing.Point(124, 290);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSdt.Name = "txtSdt";
+            this.txtSdt.Size = new System.Drawing.Size(76, 20);
+            this.txtSdt.TabIndex = 32;
             // 
-            // textBox1
+            // txtHoTenNV
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 290);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(124, 243);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 32;
+            this.txtHoTenNV.Location = new System.Drawing.Point(124, 243);
+            this.txtHoTenNV.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHoTenNV.Name = "txtHoTenNV";
+            this.txtHoTenNV.Size = new System.Drawing.Size(76, 20);
+            this.txtHoTenNV.TabIndex = 32;
             // 
             // Column1
             // 
@@ -288,11 +269,6 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Giới tính";
-            this.Column6.Name = "Column6";
-            // 
             // FormThemTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,22 +281,21 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtMau);
-            this.Controls.Add(this.txtTenXe);
-            this.Controls.Add(this.txtMaXe);
-            this.Controls.Add(this.dtGVXemay);
+            this.Controls.Add(this.txtHoTenNV);
+            this.Controls.Add(this.txtSdt);
+            this.Controls.Add(this.txtEmailNV);
+            this.Controls.Add(this.txtMatkhauNV);
+            this.Controls.Add(this.txtTenTKNV);
+            this.Controls.Add(this.dtGVNhanVien);
             this.Name = "FormThemTaiKhoan";
             this.Text = "FormThemTaiKhoan";
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).EndInit();
+            this.Load += new System.EventHandler(this.FormThemTaiKhoan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVNhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,23 +311,20 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMau;
-        private System.Windows.Forms.TextBox txtTenXe;
-        private System.Windows.Forms.TextBox txtMaXe;
-        private System.Windows.Forms.DataGridView dtGVXemay;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmailNV;
+        private System.Windows.Forms.TextBox txtMatkhauNV;
+        private System.Windows.Forms.TextBox txtTenTKNV;
+        private System.Windows.Forms.DataGridView dtGVNhanVien;
+        private System.Windows.Forms.TextBox txtSdt;
+        private System.Windows.Forms.TextBox txtHoTenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

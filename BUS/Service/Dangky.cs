@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace BUS.Service
 {
-    public class TaiKhoanService
+    public class Dangky
     {
         public List<TaiKhoan> GetAll()
         {
-            Model1 context = new Model1();
-            return context.TaiKhoans.ToList();
+            using (var context = new Model1())
+            {
+                return context.TaiKhoans.ToList();
+            }
         }
-        public void DangKy(TaiKhoan taiKhoan)
+        public void Insert(TaiKhoan taiKhoan)
         {
             using (var context = new Model1())
             {

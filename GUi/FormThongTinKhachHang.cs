@@ -273,10 +273,10 @@ namespace GUi
             var khachhangService = new Khachhang();
             List<KhachHang> searchResults = khachhangService.GetAll()
                 .Where(kh =>
-                    kh.MaKH.Contains(searchText) ||
-                    kh.TenKH.Contains(searchText) ||
-                    kh.SDTKH.Contains(searchText) ||
-                    kh.CCCD.Contains(searchText))
+                    kh.MaKH.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    kh.TenKH.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    kh.SDTKH.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    kh.CCCD.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
                 .ToList();
 
             BindGridKhach(searchResults);

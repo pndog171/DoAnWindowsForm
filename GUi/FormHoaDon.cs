@@ -81,8 +81,8 @@ namespace GUi
             string selectedKhachHangID = (string)cbbKhachHang.SelectedValue;
             string selectedXeID =(string)cbbTenXe.SelectedValue;
             model.NgayThanhToan = dateXuatDon.Value.Date;
-            model.NgayThue = dateNhanXe.Value.Date;
-            model.NgayTra = dateTraXe.Value.Date;
+            //model.NgayThue = dateNhanXe.Value.Date;
+            //model.NgayTra = dateTraXe.Value.Date;
             model.MaHD = txtHoaDon.Text;
             model.MaKH = selectedKhachHangID;
             model.TenTK = selectedNhanVien;
