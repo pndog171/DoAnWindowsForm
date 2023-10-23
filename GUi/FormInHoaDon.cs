@@ -13,6 +13,7 @@ namespace GUi
     public partial class FormInHoaDon : Form
     {
         public string DateLap, DateNhan, DateTra, TenKH, TenXe, TenLoai, TenNV, SoNgayThue, Gia, VAT, TongTien;
+
         public FormInHoaDon()
         {
             InitializeComponent();
