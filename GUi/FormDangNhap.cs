@@ -81,7 +81,7 @@ namespace GUi
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            FormDangNhap frm = new FormDangNhap();
+            /*FormDangNhap frm = new FormDangNhap();
             string tendangnhap = txtTaiKhoan.Text;
             string matkhau = txtMatKhau.Text;
 
@@ -111,7 +111,7 @@ namespace GUi
             {
                 MessageBox.Show($"Mật khẩu tối đa {matkhautoida} ký tự.\nVui lòng nhập đúng theo yêu cầu!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            else*/
             {
                 FormMenu menu = new FormMenu();
                 this.Hide();
