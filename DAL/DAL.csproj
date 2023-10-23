@@ -58,7 +58,6 @@
     <Compile Include="Entities\KhachHang.cs" />
     <Compile Include="Entities\LoaiXe.cs" />
     <Compile Include="Entities\Model1.cs" />
-    <Compile Include="Entities\sysdiagram.cs" />
     <Compile Include="Entities\TaiKhoan.cs" />
     <Compile Include="Entities\Xe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

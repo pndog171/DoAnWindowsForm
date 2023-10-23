@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DAL.Entities;
 using BUS.Service;
 using DevExpress.XtraEditors.Popup;
+using System.Drawing.Text;
 
 namespace GUi
 {
@@ -17,6 +18,8 @@ namespace GUi
     {
         private TaiKhoan tk = new TaiKhoan();
         private readonly TaiKhoanService tksv = new TaiKhoanService();
+        private readonly GioiTinhService gtsv = new GioiTinhService();
+        private readonly Model1 context = new Model1();
         public FormThemTaiKhoan()
         {
             InitializeComponent();
@@ -29,27 +32,105 @@ namespace GUi
 
         private void FormThemTaiKhoan_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                var listGioiTinh = gtsv.GetAll();
+                var listTaiKhoan = tksv.GetAll();
+                FillGenderComboBox(listGioiTinh);
+                BindgridN(listTaiKhoan);
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(dtGVNV.CurrentRow.Index != -1)
+            {
+                tk.TenTK = dtGVNV.CurrentRow.Cells[0].Value.ToString();
+                using (Model1 db = new Model1())
+                {
+                    tk = db.TaiKhoans.Where( x => x.TenTK == tk.TenTK ).FirstOrDefault();
+                    txtTenTK.Text = tk.TenTK.ToString();
+                    txtMK.Text = tk.MatKhau.ToString();
+                    txtFullName.Text = tk.TenNguoiDung.ToString();
+                    txtSdth.Text = tk.SDT.ToString();
+                    foreach(var item in cbGioiTinh.Items)
+                    {
+                        if(((GioiTinh)item).GioiTinh1 == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
+                            .ToString())
+                        {
+                            cbGioiTinh.SelectedItem = item;
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int n = GetSelectedRow(txtTenTK.Text.ToString());
+                if (!checkValue())
+                {
+                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
 
+                }if(n == -1)
+                {
+                    getValue();
+                    tksv.InsertUpdate(tk);
+                }
+                MessageBox.Show("Thêm dữ liệu thành công");
+                clearValue();
+                BindgridN(tksv.GetAll());
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int n = GetSelectedRow(txtTenTK.Text.ToString());
+                if (!checkValue())
+                {
+                    throw new Exception("Vui lòng nhập đủ thông tin!");
+                }
+                if( n != -1)
+                {
+                    UpdateRow(txtTenTK.Text);
+                }
+                MessageBox.Show("Chỉnh sửa thông tin dữ liệu thành công");
+                clearValue();
+                BindgridN(tksv.GetAll());
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int n = GetSelectedRow(txtTenTK.Text.ToString());
+                if(n == -1)
+                {
+                    throw new Exception("Không tìm thấy thông tin dữ liệu!");
+                    
+                }
+                ShowDialogDelete();
+                BindgridN(context.TaiKhoans.ToList());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -72,16 +153,16 @@ namespace GUi
                 }
             }
         }
-        private void FillGenderComboBox(List<TaiKhoan> accountlist)
+        private void FillGenderComboBox(List<GioiTinh> accountlist)
         {
-            accountlist.Insert(0, new TaiKhoan());
-            this.comboBox1.DataSource = accountlist;
-            this.comboBox1.DisplayMember = "GioiTinh1";
-            this.comboBox1.ValueMember = "MaGioiTinh";
+            accountlist.Insert(0, new GioiTinh());
+            this.cbGioiTinh.DataSource = accountlist;
+            this.cbGioiTinh.DisplayMember = "GioiTinh1";
+            this.cbGioiTinh.ValueMember = "MaGioiTinh";
         }
         private bool checkValue()
         {
-            if (txtTenTK.Text == "" || txtMK.Text == "" || txtEmail.Text == "" || txtFullName.Text == "" || txtSdth.Text == "") ;
+            if (txtTenTK.Text == "" || txtMK.Text == "" || txtEmail.Text == "" || txtFullName.Text == "" || txtSdth.Text == "")
             {
                 return false;
             }
@@ -93,16 +174,67 @@ namespace GUi
         }
         private void getValue()
         {
-            string selectedGender = (string)comboBox1.SelectedValue;
+            string selectedGender = (string)cbGioiTinh.SelectedValue;
             tk.TenTK = txtTenTK.Text;
             tk.MatKhau = txtMK.Text;
             tk.email = txtEmail.Text;
-            tk.TenNguoiDung = txtTenTK.Text;
+            tk.TenNguoiDung = txtFullName.Text;
             tk.SDT = txtSdth.Text;
+            tk.MaGioiTinh = selectedGender;
         }
-        /*private int GetSelectedRow( string nameaccount)
+        private int GetSelectedRow( string nameaccount)
         {
-            for(int n)
-        }*/
+            for(int i = 0; i< dtGVNV.Rows.Count; i++)
+            {
+                if (dtGVNV.Rows[i].Cells[0].Value.ToString() == nameaccount)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        private void UpdateRow(string nameaccount)
+        {
+            try
+            {
+                var updating = context.TaiKhoans.Find(nameaccount);
+                if(updating != null)
+                {
+                    updating.TenTK = txtTenTK.Text;
+                    updating.MatKhau = txtMK.Text;
+                    var selectedUpdate = (GioiTinh)cbGioiTinh.SelectedItem;
+                    string IDGioiTinh = selectedUpdate.GioiTinh1;
+                    updating.MaGioiTinh = IDGioiTinh;
+                    context.SaveChanges();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+        private void delete(string nameaccount)
+        {
+            using (var context = new Model1())
+            {
+                var Deleting = context.TaiKhoans.Find(nameaccount);
+                if(Deleting != null)
+                {
+                    context.TaiKhoans.Remove(Deleting);
+                    context.SaveChanges();
+                }
+            }
+            BindgridN(context.TaiKhoans.ToList());
+            clearValue();
+        }
+        private void ShowDialogDelete()
+        {
+            DialogResult res = MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Thông báo", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                delete(txtTenTK.Text);
+                MessageBox.Show("Xóa thành công!");
+            }
+        }
     }
 }

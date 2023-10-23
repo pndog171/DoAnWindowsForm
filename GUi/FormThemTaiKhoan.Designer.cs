@@ -51,7 +51,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtSdth = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVNV)).BeginInit();
@@ -62,7 +62,7 @@
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTim.Image = global::GUi.Properties.Resources.search;
             this.btnTim.Location = new System.Drawing.Point(567, 97);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(41, 28);
             this.btnTim.TabIndex = 49;
@@ -71,7 +71,7 @@
             // txtTim
             // 
             this.txtTim.Location = new System.Drawing.Point(425, 98);
-            this.txtTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(4);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(132, 22);
             this.txtTim.TabIndex = 48;
@@ -101,7 +101,7 @@
             // 
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSua.Location = new System.Drawing.Point(657, 480);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 44;
@@ -214,6 +214,7 @@
             // 
             // dtGVNV
             // 
+            this.dtGVNV.AllowUserToAddRows = false;
             this.dtGVNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGVNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -273,14 +274,14 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
             // 
-            // comboBox1
+            // cbGioiTinh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 411);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 41;
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Location = new System.Drawing.Point(165, 411);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(121, 24);
+            this.cbGioiTinh.TabIndex = 41;
             // 
             // txtSdth
             // 
@@ -310,7 +311,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbGioiTinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -323,7 +324,7 @@
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.txtTenTK);
             this.Controls.Add(this.dtGVNV);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormThemTaiKhoan";
             this.Text = "FormThemTaiKhoan";
             this.Load += new System.EventHandler(this.FormThemTaiKhoan_Load);
@@ -352,7 +353,7 @@
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.TextBox txtTenTK;
         private System.Windows.Forms.DataGridView dtGVNV;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.TextBox txtSdth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
