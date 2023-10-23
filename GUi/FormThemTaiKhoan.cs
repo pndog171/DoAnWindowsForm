@@ -149,7 +149,7 @@ namespace GUi
                 dtGVNV.Rows[index].Cells[4].Value = i.SDT;
                 if (i.GioiTinh != null)
                 {
-                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh.GioiTinh1;
+                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh.TenGioiTinh;
                 }
             }
         }

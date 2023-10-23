@@ -19,10 +19,9 @@ namespace DAL.Entities
         [StringLength(1)]
         public string MaGioiTinh { get; set; }
 
-        [Column("GioiTinh")]
         [Required]
         [StringLength(4)]
-        public string GioiTinh1 { get; set; }
+        public string TenGioiTinh { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaiKhoan> TaiKhoans { get; set; }

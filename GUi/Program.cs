@@ -16,7 +16,11 @@ namespace GUi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new FormThemTaiKhoan());
+=======
+            Application.Run(new FormDangKy());
+>>>>>>> Stashed changes
         }
     }
 }
