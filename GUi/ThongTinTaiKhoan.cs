@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS.Service;
+using DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace GUi
 {
     public partial class formThongTinTaiKhoan : Form
     {
+        private string mand = FormDangNhap.MaNguoiDung;            
+        private readonly TaiKhoanService tksv = new TaiKhoanService();
+        //TaiKhoan tk = tksv.GetById("mand");
         public formThongTinTaiKhoan()
         {
             InitializeComponent();
@@ -33,6 +38,9 @@ namespace GUi
                 this.Hide();
         }
 
-  
+        private void formThongTinTaiKhoan_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

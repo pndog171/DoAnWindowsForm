@@ -12,6 +12,9 @@ namespace GUi
 {
     public partial class FormDangNhap : Form
     {
+
+        public static string MaNguoiDung;
+
         List<Image> images = new List<Image>();
         string[] location = new string[25];
 
@@ -113,6 +116,7 @@ namespace GUi
             }
             else
             {
+                MaNguoiDung = txtTaiKhoan.Text;
                 FormMenu menu = new FormMenu();
                 this.Hide();
                 menu.ShowDialog();

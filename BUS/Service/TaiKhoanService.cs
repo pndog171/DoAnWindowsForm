@@ -22,6 +22,11 @@ namespace BUS.Service
                 return context.TaiKhoans.Where(p => p.TenNguoiDung.ToLower().Contains(name.ToLower())).ToList();
             
         }
+        public TaiKhoan GetById(string id) 
+        {
+            Model1 context = new Model1();
+            return context.TaiKhoans.FirstOrDefault(b => b.TenTK == id);
+        }
         public void InsertUpdate(TaiKhoan item)
         {
             Model1 context = new Model1();

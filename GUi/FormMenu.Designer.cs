@@ -62,10 +62,10 @@
             this.fluentDesignFormContainer1.Controls.Add(this.label1);
             this.fluentDesignFormContainer1.Controls.Add(this.pictureBox1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(250, 24);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(58, 24);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(5);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(475, 449);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(667, 449);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // label1
@@ -105,8 +105,9 @@
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
+            this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 449);
+            this.accordionControl1.Size = new System.Drawing.Size(58, 449);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 

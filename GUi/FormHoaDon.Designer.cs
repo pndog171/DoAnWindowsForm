@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateNhanXe = new System.Windows.Forms.DateTimePicker();
@@ -56,7 +57,6 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
@@ -106,6 +106,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn mới";
+            // 
+            // btnTinhTien
+            // 
+            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
+            this.btnTinhTien.Name = "btnTinhTien";
+            this.btnTinhTien.Size = new System.Drawing.Size(75, 23);
+            this.btnTinhTien.TabIndex = 24;
+            this.btnTinhTien.Text = "Tính tiền";
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // label13
             // 
@@ -325,6 +334,7 @@
             this.btnInHD.Size = new System.Drawing.Size(75, 23);
             this.btnInHD.TabIndex = 3;
             this.btnInHD.Text = "In hóa đơn";
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // btnThoat
             // 
@@ -333,15 +343,6 @@
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
-            // 
-            // btnTinhTien
-            // 
-            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
-            this.btnTinhTien.Name = "btnTinhTien";
-            this.btnTinhTien.Size = new System.Drawing.Size(75, 23);
-            this.btnTinhTien.TabIndex = 24;
-            this.btnTinhTien.Text = "Tính tiền";
-            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // FormHoaDon
             // 

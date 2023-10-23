@@ -156,7 +156,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GUi.Properties.Resources.back;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1, -1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 29);
             this.pictureBox2.TabIndex = 10;
@@ -185,6 +185,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formThongTinTaiKhoan";
             this.Text = "ThongTinTaiKhoan";
+            this.Load += new System.EventHandler(this.formThongTinTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
