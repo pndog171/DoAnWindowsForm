@@ -32,7 +32,16 @@ namespace GUi
 
         private void FormThemTaiKhoan_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var listGioiTinh = gtsv.GetAll();
+                var listTaiKhoan = tksv.GetAll();
+                FillGenderComboBox(listGioiTinh);
+                BindgridN(listTaiKhoan);
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,12 +56,12 @@ namespace GUi
                     txtMK.Text = tk.MatKhau.ToString();
                     txtFullName.Text = tk.TenNguoiDung.ToString();
                     txtSdth.Text = tk.SDT.ToString();
-                    foreach(var item in cbGioiTinhs.Items)
+                    foreach(var item in cbGioiTinh.Items)
                     {
-                        if(((GioiTinh)item).GioiTinh1 == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[5].Value
+                        if(((GioiTinh)item).GioiTinh1 == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
                             .ToString())
                         {
-                            cbGioiTinhs.SelectedItem = item;
+                            cbGioiTinh.SelectedItem = item;
                             break;
                         }
                     }
@@ -146,11 +155,10 @@ namespace GUi
         }
         private void FillGenderComboBox(List<GioiTinh> accountlist)
         {
-            
             accountlist.Insert(0, new GioiTinh());
-            this.cbGioiTinhs.DataSource = accountlist;
-            this.cbGioiTinhs.DisplayMember = "GioiTinh1";
-            this.cbGioiTinhs.ValueMember = "MaGioiTinh";
+            this.cbGioiTinh.DataSource = accountlist;
+            this.cbGioiTinh.DisplayMember = "GioiTinh1";
+            this.cbGioiTinh.ValueMember = "MaGioiTinh";
         }
         private bool checkValue()
         {
@@ -166,7 +174,7 @@ namespace GUi
         }
         private void getValue()
         {
-            string selectedGender = (string)cbGioiTinhs.SelectedValue;
+            string selectedGender = (string)cbGioiTinh.SelectedValue;
             tk.TenTK = txtTenTK.Text;
             tk.MatKhau = txtMK.Text;
             tk.email = txtEmail.Text;
@@ -194,7 +202,7 @@ namespace GUi
                 {
                     updating.TenTK = txtTenTK.Text;
                     updating.MatKhau = txtMK.Text;
-                    var selectedUpdate = (GioiTinh)cbGioiTinhs.SelectedItem;
+                    var selectedUpdate = (GioiTinh)cbGioiTinh.SelectedItem;
                     string IDGioiTinh = selectedUpdate.GioiTinh1;
                     updating.MaGioiTinh = IDGioiTinh;
                     context.SaveChanges();
@@ -239,21 +247,9 @@ namespace GUi
             }
         }
 
-        private void FormThemTaiKhoan_Load_1(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var listGioiTinh = gtsv.GetAll();
-                var listTaiKhoan = tksv.GetAll();
-                FillGenderComboBox(listGioiTinh);
-                BindgridN(listTaiKhoan);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.Hide();
         }
-
-       
     }
 }

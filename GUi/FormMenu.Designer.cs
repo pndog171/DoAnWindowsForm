@@ -39,7 +39,6 @@
             this.btnThemTaiKhoan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThemKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnThongTinTaiKhoan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnDangXuat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnThoat = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -146,21 +145,12 @@
             // accordionControlElement6
             // 
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnThongTinTaiKhoan,
             this.btnDangXuat,
             this.btnThoat});
             this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Tuỳ chọn";
-            // 
-            // btnThongTinTaiKhoan
-            // 
-            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinTaiKhoan.ImageOptions.Image")));
-            this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
-            this.btnThongTinTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
-            this.btnThongTinTaiKhoan.Click += new System.EventHandler(this.btnThongTinTaiKhoan_Click);
             // 
             // btnDangXuat
             // 
@@ -291,7 +281,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemTaiKhoan;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnThemKhachHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnXeMay;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnThongTinTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }
