@@ -30,13 +30,7 @@ namespace GUi
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormMenu frmdn = new FormMenu();
-            DialogResult DR = MessageBox.Show("Bạn có muốn quay lại màn hình đăng nhập không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DR == DialogResult.Yes)
-            {
                 this.Hide();
-            //    frmdn.ShowDialog();
-            }
         }
 
   
