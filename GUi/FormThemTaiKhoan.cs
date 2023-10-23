@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL.Entities;
 using BUS.Service;
-using DevExpress.XtraEditors.Popup;
 
 namespace GUi
 {
@@ -75,13 +74,13 @@ namespace GUi
         private void FillGenderComboBox(List<TaiKhoan> accountlist)
         {
             accountlist.Insert(0, new TaiKhoan());
-            this.comboBox1.DataSource = accountlist;
-            this.comboBox1.DisplayMember = "GioiTinh1";
-            this.comboBox1.ValueMember = "MaGioiTinh";
+            this.cbbGioiTinh.DataSource = accountlist;
+            this.cbbGioiTinh.DisplayMember = "GioiTinh1";
+            this.cbbGioiTinh.ValueMember = "MaGioiTinh";
         }
         private bool checkValue()
         {
-            if (txtTenTK.Text == "" || txtMK.Text == "" || txtEmail.Text == "" || txtFullName.Text == "" || txtSdth.Text == "") ;
+            if (txtTenTK.Text == "" || txtMK.Text == "" || txtEmail.Text == "" || txtFullName.Text == "" || txtSdth.Text == "")
             {
                 return false;
             }
@@ -93,7 +92,7 @@ namespace GUi
         }
         private void getValue()
         {
-            string selectedGender = (string)comboBox1.SelectedValue;
+            string selectedGender = (string)cbbGioiTinh.SelectedValue;
             tk.TenTK = txtTenTK.Text;
             tk.MatKhau = txtMK.Text;
             tk.email = txtEmail.Text;

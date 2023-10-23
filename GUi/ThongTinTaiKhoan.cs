@@ -35,7 +35,7 @@ namespace GUi
             if (DR == DialogResult.Yes)
             {
                 this.Hide();
-                frmdn.ShowDialog();
+            //    frmdn.ShowDialog();
             }
         }
 
