@@ -50,8 +50,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTim = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -240,7 +242,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(151, 27);
+            this.label7.Location = new System.Drawing.Point(176, 28);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(383, 31);
             this.label7.TabIndex = 26;
@@ -262,6 +264,17 @@
             this.txtTim.Size = new System.Drawing.Size(100, 20);
             this.txtTim.TabIndex = 28;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUi.Properties.Resources.back2;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // btnTim
             // 
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -277,6 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 451);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.label8);
@@ -295,12 +309,13 @@
             this.Controls.Add(this.txtTenXe);
             this.Controls.Add(this.txtMaXe);
             this.Controls.Add(this.dtGVXemay);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPhuongtien";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmPhuongtien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +346,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

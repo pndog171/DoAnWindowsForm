@@ -246,5 +246,10 @@ namespace GUi
                 BindgridN(tksv.FindByName(txtTim.Text));
             }
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

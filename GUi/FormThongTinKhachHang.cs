@@ -281,5 +281,10 @@ namespace GUi
 
             BindGridKhach(searchResults);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

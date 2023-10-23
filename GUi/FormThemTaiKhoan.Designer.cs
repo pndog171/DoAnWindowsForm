@@ -338,6 +338,7 @@
             this.btnThoat.Size = new System.Drawing.Size(42, 43);
             this.btnThoat.TabIndex = 43;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormThemTaiKhoan
             // 
