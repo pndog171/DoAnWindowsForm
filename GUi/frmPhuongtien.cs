@@ -243,6 +243,16 @@ namespace GUi
         {
             this.Hide();
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+                BindGridXeMay(pt.GetAll());
+            else
+            {
+                BindGridXeMay(pt.FindByName(txtTim.Text));
+            }
+        }
     }
    
 }
