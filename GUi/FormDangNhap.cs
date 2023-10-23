@@ -42,6 +42,7 @@ namespace GUi
             location[21] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_23.jpg";
             location[22] = @"C:\Users\PHONG\Documents\DoAnMonCNPM-sub2\Login Avatar animation\animation\textbox_user_24.jpg";
             tounage();*/
+            txtMatKhau.PasswordChar = '*';
         }
 
         /*private void tounage()
@@ -80,7 +81,7 @@ namespace GUi
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            FormDangNhap frm = new FormDangNhap();
+            /*FormDangNhap frm = new FormDangNhap();
             string tendangnhap = txtTaiKhoan.Text;
             string matkhau = txtMatKhau.Text;
 
@@ -110,7 +111,7 @@ namespace GUi
             {
                 MessageBox.Show($"Mật khẩu tối đa {matkhautoida} ký tự.\nVui lòng nhập đúng theo yêu cầu!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            else*/
             {
                 FormMenu menu = new FormMenu();
                 this.Hide();
@@ -119,6 +120,54 @@ namespace GUi
             }
         }
 
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
 
+                this.Hide();
+                FormDangKy openfrm = new FormDangKy();
+                openfrm.ShowDialog();
+
+            
+        }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtTaiKhoan.Focus();
+                e.Handled = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                txtTaiKhoan.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                txtMatKhau.PasswordChar = '\0'; 
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*';
+            }
+        }
     }
 }

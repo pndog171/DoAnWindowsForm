@@ -30,7 +30,13 @@ namespace DAL.Entities
         [StringLength(10)]
         public string MaKH { get; set; }
 
+        public DateTime NgayThue { get; set; }
+
+        public DateTime NgayTra { get; set; }
+
         public virtual KhachHang KhachHang { get; set; }
+
+        public virtual TaiKhoan TaiKhoan { get; set; }
 
         public virtual Xe Xe { get; set; }
     }

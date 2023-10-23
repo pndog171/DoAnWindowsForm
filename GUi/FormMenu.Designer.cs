@@ -124,6 +124,7 @@
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnHoaDon.Text = "Hoá đơn";
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnThemTaiKhoan
             // 
@@ -131,6 +132,7 @@
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
             this.btnThemTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThemTaiKhoan.Text = "Thêm tài khoản";
+            this.btnThemTaiKhoan.Click += new System.EventHandler(this.btnThemTaiKhoan_Click);
             // 
             // btnThemKhachHang
             // 
@@ -138,6 +140,7 @@
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThemKhachHang.Text = "Thông tin khách hàng";
+            this.btnThemKhachHang.Click += new System.EventHandler(this.btnThemKhachHang_Click);
             // 
             // accordionControlElement6
             // 
@@ -152,10 +155,11 @@
             // 
             // btnThongTinTaiKhoan
             // 
-            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.ImageOptions.Image")));
+            this.btnThongTinTaiKhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinTaiKhoan.ImageOptions.Image")));
             this.btnThongTinTaiKhoan.Name = "btnThongTinTaiKhoan";
             this.btnThongTinTaiKhoan.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.btnThongTinTaiKhoan.Text = "Thông tin tài khoản";
+            this.btnThongTinTaiKhoan.Click += new System.EventHandler(this.btnThongTinTaiKhoan_Click);
             // 
             // btnDangXuat
             // 
