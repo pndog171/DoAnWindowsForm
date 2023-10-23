@@ -12,6 +12,9 @@ namespace GUi
 {
     public partial class FormDangNhap : Form
     {
+
+        public static string MaNguoiDung;
+
         List<Image> images = new List<Image>();
         string[] location = new string[25];
 
@@ -71,7 +74,7 @@ namespace GUi
         {
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
-                this.Close();
+                Application.Exit();
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
@@ -113,6 +116,7 @@ namespace GUi
             }
             else*/
             {
+                MaNguoiDung = txtTaiKhoan.Text;
                 FormMenu menu = new FormMenu();
                 this.Hide();
                 menu.ShowDialog();
@@ -168,6 +172,11 @@ namespace GUi
             {
                 txtMatKhau.PasswordChar = '*';
             }
+        }
+
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

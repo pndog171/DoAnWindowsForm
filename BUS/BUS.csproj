@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Dangky.cs" />
+    <Compile Include="Service\GioiTinhService.cs" />
     <Compile Include="Service\HoaDonService.cs" />
     <Compile Include="Service\TaiKhoanService.cs" />
     <Compile Include="Service\Khachhang.cs" />

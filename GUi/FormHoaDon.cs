@@ -196,5 +196,15 @@ namespace GUi
             decimal result = Gia * SNthue * ((Tax + 100) / 100);
             txtTongTien.Text = result.ToString();
         }
+
+        private void btnInHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

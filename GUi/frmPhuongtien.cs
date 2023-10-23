@@ -67,7 +67,7 @@ namespace GUi
             dtGVXemay.Rows.Clear();
             foreach (Xe x in xe)
             {
-                int index = dtGVXemay.Rows.Add(x);
+                int index = dtGVXemay.Rows.Add();
                 dtGVXemay.Rows[index].Cells[0].Value = x.MaXe;
                 dtGVXemay.Rows[index].Cells[1].Value = x.TenXe;
                 
@@ -237,6 +237,21 @@ namespace GUi
         private void cbLoaiXe_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+                BindGridXeMay(pt.GetAll());
+            else
+            {
+                BindGridXeMay(pt.FindByName(txtTim.Text));
+            }
         }
     }
    

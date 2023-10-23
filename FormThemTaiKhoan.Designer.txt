@@ -1,4 +1,4 @@
-﻿namespace GUi
+namespace GUi
 {
     partial class FormThemTaiKhoan
     {
@@ -47,12 +47,13 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtSdth = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTim = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -234,14 +235,14 @@
             this.Column6.HeaderText = "Giới tính";
             this.Column6.Name = "Column6";
             // 
-            // cbGioiTinh
+            // cbbGioiTinh
             // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(313, 123);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(111, 21);
-            this.cbGioiTinh.TabIndex = 41;
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Location = new System.Drawing.Point(313, 123);
+            this.cbbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(111, 21);
+            this.cbbGioiTinh.TabIndex = 41;
             // 
             // txtSdth
             // 
@@ -286,6 +287,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtGVNV);
+            this.groupBox1.Controls.Add(this.btnTim);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTim);
             this.groupBox1.Location = new System.Drawing.Point(12, 230);
@@ -294,6 +296,17 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản của nhân viên";
+            // 
+            // btnTim
+            // 
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Image = global::GUi.Properties.Resources.search;
+            this.btnTim.Location = new System.Drawing.Point(178, 22);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(31, 23);
+            this.btnTim.TabIndex = 49;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // groupBox2
             // 
@@ -315,7 +328,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cbGioiTinh);
+            this.groupBox3.Controls.Add(this.cbbGioiTinh);
             this.groupBox3.Controls.Add(this.txtSdth);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtFullName);
@@ -338,7 +351,6 @@
             this.btnThoat.Size = new System.Drawing.Size(42, 43);
             this.btnThoat.TabIndex = 43;
             this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormThemTaiKhoan
             // 
@@ -364,6 +376,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSua;
@@ -379,7 +393,7 @@
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.TextBox txtTenTK;
         private System.Windows.Forms.DataGridView dtGVNV;
-        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.ComboBox cbbGioiTinh;
         private System.Windows.Forms.TextBox txtSdth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
