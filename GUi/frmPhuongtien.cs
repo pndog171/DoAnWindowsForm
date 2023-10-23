@@ -67,7 +67,7 @@ namespace GUi
             dtGVXemay.Rows.Clear();
             foreach (Xe x in xe)
             {
-                int index = dtGVXemay.Rows.Add(x);
+                int index = dtGVXemay.Rows.Add();
                 dtGVXemay.Rows[index].Cells[0].Value = x.MaXe;
                 dtGVXemay.Rows[index].Cells[1].Value = x.TenXe;
                 
