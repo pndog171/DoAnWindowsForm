@@ -1,6 +1,4 @@
-﻿using BUS.Service;
-using DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using BUS.Service;
+using DAL.Entities;
 
 namespace GUi
 {
@@ -32,7 +33,7 @@ namespace GUi
         {
             try
             {
-                var listTheloai = lpt.GetAllType();
+                var listTheloai = lpt.GetAll();
                 var listXe = pt.GetAll();
                 FillTypeofXeCombobox(listTheloai);
                 BindGridXeMay(listXe);
@@ -62,21 +63,17 @@ namespace GUi
             xe.DonGia = decimal.Parse(txtDonGia.Text);
             xe.MaLoai = selectedTheloaixe;
         }
-        private void BindGridXeMay(List<Xe> xe) //BINDGRID
+        private void BindGridXeMay(List<Xe> listxe) //BINDGRID
         {
             dtGVXemay.Rows.Clear();
-            foreach (Xe x in xe)
+            foreach (var item in listxe)
             {
-                int index = dtGVXemay.Rows.Add(x);
-                dtGVXemay.Rows[index].Cells[0].Value = x.MaXe;
-                dtGVXemay.Rows[index].Cells[1].Value = x.TenXe;
-                
-                dtGVXemay.Rows[index].Cells[2].Value = x.Mau;
-                if (x.LoaiXe != null)
-                {
-                    dtGVXemay.Rows[index].Cells[3].Value = x.LoaiXe.TenLoai;
-                }
-                dtGVXemay.Rows[index].Cells[4].Value = x.DonGia.ToString();
+                int index = dtGVXemay.Rows.Add();
+                dtGVXemay.Rows[index].Cells[0].Value = item.MaXe;
+                dtGVXemay.Rows[index].Cells[1].Value = item.TenXe;
+                dtGVXemay.Rows[index].Cells[2].Value = item.Mau;
+                dtGVXemay.Rows[index].Cells[3].Value = item.LoaiXe.TenLoai;
+                dtGVXemay.Rows[index].Cells[4].Value = item.DonGia.ToString();
             }
         }
         private void FillTypeofXeCombobox(List<LoaiXe> loaiXes) //FILL
@@ -163,11 +160,11 @@ namespace GUi
         }
         private void showDialogDelete() //BANGTHONGBAO XOA 
         {
-            DialogResult result = MessageBox.Show("Ban chac chan co muon xoa ?", "Yes/No", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Ban chac chan co muon xoa?", "Yes/No", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 delete(txtMaXe.Text);
-                MessageBox.Show("Xoa thanh cong !!!");
+                MessageBox.Show("Xoa thanh cong!!!");
             }
         }
 

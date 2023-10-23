@@ -52,16 +52,20 @@
             this.dateXuatDon = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txtHoaDon = new DevExpress.XtraEditors.TextEdit();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(349, 18);
@@ -69,6 +73,10 @@
             this.label1.Size = new System.Drawing.Size(141, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnTinhTien);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.dateNhanXe);
@@ -99,6 +107,8 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn mới";
             // 
+            // label13
+            // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 209);
             this.label13.Name = "label13";
@@ -121,6 +131,7 @@
             this.dateNhanXe.Name = "dateNhanXe";
             this.dateNhanXe.Size = new System.Drawing.Size(200, 20);
             this.dateNhanXe.TabIndex = 21;
+            this.dateNhanXe.ValueChanged += new System.EventHandler(this.dateNhanXe_ValueChanged);
             // 
             // dateTraXe
             // 
@@ -128,9 +139,13 @@
             this.dateTraXe.Name = "dateTraXe";
             this.dateTraXe.Size = new System.Drawing.Size(200, 20);
             this.dateTraXe.TabIndex = 20;
+            this.dateTraXe.ValueChanged += new System.EventHandler(this.dateTraXe_ValueChanged);
             // 
             // txtSoNgayThue
             // 
+            this.txtSoNgayThue.AcceptsReturn = true;
+            this.txtSoNgayThue.AllowDrop = true;
+            this.txtSoNgayThue.Enabled = false;
             this.txtSoNgayThue.Location = new System.Drawing.Point(723, 53);
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(44, 20);
@@ -184,6 +199,7 @@
             // 
             // txtGia
             // 
+            this.txtGia.Enabled = false;
             this.txtGia.Location = new System.Drawing.Point(480, 54);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(160, 20);
@@ -191,6 +207,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Enabled = false;
             this.txtTongTien.Location = new System.Drawing.Point(480, 132);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(200, 20);
@@ -290,48 +307,50 @@
             this.txtHoaDon.Name = "txtHoaDon";
             this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
             this.txtHoaDon.TabIndex = 0;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(446, 299);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Lưu";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(561, 299);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "In hóa đơn";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Location = new System.Drawing.Point(682, 299);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 4;
-            this.simpleButton3.Text = "Hủy";
-            // 
-            // txtHoaDon
-            // 
-            this.txtHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtHoaDon.Location = new System.Drawing.Point(90, 19);
-            this.txtHoaDon.Name = "txtHoaDon";
-            this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
-            this.txtHoaDon.TabIndex = 0;
             this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(446, 299);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnInHD
+            // 
+            this.btnInHD.Location = new System.Drawing.Point(561, 299);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(75, 23);
+            this.btnInHD.TabIndex = 3;
+            this.btnInHD.Text = "In hóa đơn";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(682, 299);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            // 
+            // btnTinhTien
+            // 
+            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
+            this.btnTinhTien.Name = "btnTinhTien";
+            this.btnTinhTien.Size = new System.Drawing.Size(75, 23);
+            this.btnTinhTien.TabIndex = 24;
+            this.btnTinhTien.Text = "Tính tiền";
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 354);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnInHD);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormHoaDon";
@@ -362,9 +381,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbbTenXe;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnInHD;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.TextEdit txtTongTien;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -378,5 +397,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.TextEdit txtHoaDon;
+        private DevExpress.XtraEditors.SimpleButton btnTinhTien;
     }
 }
