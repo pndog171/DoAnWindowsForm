@@ -173,5 +173,10 @@ namespace GUi
                 txtMatKhau.PasswordChar = '*';
             }
         }
+
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

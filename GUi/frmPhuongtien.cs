@@ -238,6 +238,11 @@ namespace GUi
         {
 
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }
