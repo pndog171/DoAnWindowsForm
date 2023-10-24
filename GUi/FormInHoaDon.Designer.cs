@@ -42,31 +42,29 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbDateTra = new System.Windows.Forms.Label();
+            this.lbDateNhan = new System.Windows.Forms.Label();
+            this.lbTenNV = new System.Windows.Forms.Label();
+            this.lbTenKH = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.abel10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbGia = new System.Windows.Forms.Label();
+            this.lbSoNgayThue = new System.Windows.Forms.Label();
+            this.lbTenXe = new System.Windows.Forms.Label();
             this.label01 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbTongTien = new System.Windows.Forms.Label();
+            this.lbVAT = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.lbTenKH = new System.Windows.Forms.Label();
-            this.lbTenNV = new System.Windows.Forms.Label();
-            this.lbDateTra = new System.Windows.Forms.Label();
-            this.lbDateNhan = new System.Windows.Forms.Label();
-            this.lbTenXe = new System.Windows.Forms.Label();
-            this.lbLoai = new System.Windows.Forms.Label();
-            this.lbSoNgayThue = new System.Windows.Forms.Label();
-            this.lbGia = new System.Windows.Forms.Label();
             this.lbDateLap = new System.Windows.Forms.Label();
-            this.lbVAT = new System.Windows.Forms.Label();
-            this.lbTongTien = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,7 +144,7 @@
             // 
             this.lbNgayLap.AutoSize = true;
             this.lbNgayLap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayLap.Location = new System.Drawing.Point(211, 192);
+            this.lbNgayLap.Location = new System.Drawing.Point(224, 191);
             this.lbNgayLap.Name = "lbNgayLap";
             this.lbNgayLap.Size = new System.Drawing.Size(117, 16);
             this.lbNgayLap.TabIndex = 3;
@@ -217,6 +215,42 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
+            // lbDateTra
+            // 
+            this.lbDateTra.AutoSize = true;
+            this.lbDateTra.Location = new System.Drawing.Point(403, 69);
+            this.lbDateTra.Name = "lbDateTra";
+            this.lbDateTra.Size = new System.Drawing.Size(28, 13);
+            this.lbDateTra.TabIndex = 4;
+            this.lbDateTra.Text = "data";
+            // 
+            // lbDateNhan
+            // 
+            this.lbDateNhan.AutoSize = true;
+            this.lbDateNhan.Location = new System.Drawing.Point(95, 69);
+            this.lbDateNhan.Name = "lbDateNhan";
+            this.lbDateNhan.Size = new System.Drawing.Size(28, 13);
+            this.lbDateNhan.TabIndex = 4;
+            this.lbDateNhan.Text = "data";
+            // 
+            // lbTenNV
+            // 
+            this.lbTenNV.AutoSize = true;
+            this.lbTenNV.Location = new System.Drawing.Point(147, 44);
+            this.lbTenNV.Name = "lbTenNV";
+            this.lbTenNV.Size = new System.Drawing.Size(28, 13);
+            this.lbTenNV.TabIndex = 4;
+            this.lbTenNV.Text = "data";
+            // 
+            // lbTenKH
+            // 
+            this.lbTenKH.AutoSize = true;
+            this.lbTenKH.Location = new System.Drawing.Point(134, 17);
+            this.lbTenKH.Name = "lbTenKH";
+            this.lbTenKH.Size = new System.Drawing.Size(28, 13);
+            this.lbTenKH.TabIndex = 4;
+            this.lbTenKH.Text = "data";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -227,21 +261,11 @@
             this.label16.TabIndex = 3;
             this.label16.Text = "Tên xe:";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(6, 41);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 16);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Loại xe:";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 66);
+            this.label18.Location = new System.Drawing.Point(6, 52);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(105, 16);
             this.label18.TabIndex = 3;
@@ -262,10 +286,8 @@
             this.groupBox2.Controls.Add(this.abel10);
             this.groupBox2.Controls.Add(this.lbGia);
             this.groupBox2.Controls.Add(this.lbSoNgayThue);
-            this.groupBox2.Controls.Add(this.lbLoai);
             this.groupBox2.Controls.Add(this.lbTenXe);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.Location = new System.Drawing.Point(11, 324);
@@ -273,6 +295,33 @@
             this.groupBox2.Size = new System.Drawing.Size(646, 117);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
+            // 
+            // lbGia
+            // 
+            this.lbGia.AutoSize = true;
+            this.lbGia.Location = new System.Drawing.Point(62, 92);
+            this.lbGia.Name = "lbGia";
+            this.lbGia.Size = new System.Drawing.Size(28, 13);
+            this.lbGia.TabIndex = 4;
+            this.lbGia.Text = "data";
+            // 
+            // lbSoNgayThue
+            // 
+            this.lbSoNgayThue.AutoSize = true;
+            this.lbSoNgayThue.Location = new System.Drawing.Point(112, 55);
+            this.lbSoNgayThue.Name = "lbSoNgayThue";
+            this.lbSoNgayThue.Size = new System.Drawing.Size(28, 13);
+            this.lbSoNgayThue.TabIndex = 4;
+            this.lbSoNgayThue.Text = "data";
+            // 
+            // lbTenXe
+            // 
+            this.lbTenXe.AutoSize = true;
+            this.lbTenXe.Location = new System.Drawing.Point(54, 18);
+            this.lbTenXe.Name = "lbTenXe";
+            this.lbTenXe.Size = new System.Drawing.Size(28, 13);
+            this.lbTenXe.TabIndex = 4;
+            this.lbTenXe.Text = "data";
             // 
             // label01
             // 
@@ -306,6 +355,24 @@
             this.groupBox3.Size = new System.Drawing.Size(646, 66);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
+            // 
+            // lbTongTien
+            // 
+            this.lbTongTien.AutoSize = true;
+            this.lbTongTien.Location = new System.Drawing.Point(75, 43);
+            this.lbTongTien.Name = "lbTongTien";
+            this.lbTongTien.Size = new System.Drawing.Size(28, 13);
+            this.lbTongTien.TabIndex = 4;
+            this.lbTongTien.Text = "data";
+            // 
+            // lbVAT
+            // 
+            this.lbVAT.AutoSize = true;
+            this.lbVAT.Location = new System.Drawing.Point(101, 17);
+            this.lbVAT.Name = "lbVAT";
+            this.lbVAT.Size = new System.Drawing.Size(28, 13);
+            this.lbVAT.TabIndex = 4;
+            this.lbVAT.Text = "data";
             // 
             // label20
             // 
@@ -367,104 +434,14 @@
             this.label24.TabIndex = 3;
             this.label24.Text = "(In tại phòng chăm sóc khách hàng - Công ty cho thuê xe Gacha Addicts)";
             // 
-            // lbTenKH
-            // 
-            this.lbTenKH.AutoSize = true;
-            this.lbTenKH.Location = new System.Drawing.Point(134, 17);
-            this.lbTenKH.Name = "lbTenKH";
-            this.lbTenKH.Size = new System.Drawing.Size(28, 13);
-            this.lbTenKH.TabIndex = 4;
-            this.lbTenKH.Text = "data";
-            // 
-            // lbTenNV
-            // 
-            this.lbTenNV.AutoSize = true;
-            this.lbTenNV.Location = new System.Drawing.Point(147, 44);
-            this.lbTenNV.Name = "lbTenNV";
-            this.lbTenNV.Size = new System.Drawing.Size(28, 13);
-            this.lbTenNV.TabIndex = 4;
-            this.lbTenNV.Text = "data";
-            // 
-            // lbDateTra
-            // 
-            this.lbDateTra.AutoSize = true;
-            this.lbDateTra.Location = new System.Drawing.Point(403, 69);
-            this.lbDateTra.Name = "lbDateTra";
-            this.lbDateTra.Size = new System.Drawing.Size(28, 13);
-            this.lbDateTra.TabIndex = 4;
-            this.lbDateTra.Text = "data";
-            // 
-            // lbDateNhan
-            // 
-            this.lbDateNhan.AutoSize = true;
-            this.lbDateNhan.Location = new System.Drawing.Point(95, 69);
-            this.lbDateNhan.Name = "lbDateNhan";
-            this.lbDateNhan.Size = new System.Drawing.Size(28, 13);
-            this.lbDateNhan.TabIndex = 4;
-            this.lbDateNhan.Text = "data";
-            // 
-            // lbTenXe
-            // 
-            this.lbTenXe.AutoSize = true;
-            this.lbTenXe.Location = new System.Drawing.Point(54, 18);
-            this.lbTenXe.Name = "lbTenXe";
-            this.lbTenXe.Size = new System.Drawing.Size(28, 13);
-            this.lbTenXe.TabIndex = 4;
-            this.lbTenXe.Text = "data";
-            // 
-            // lbLoai
-            // 
-            this.lbLoai.AutoSize = true;
-            this.lbLoai.Location = new System.Drawing.Point(54, 43);
-            this.lbLoai.Name = "lbLoai";
-            this.lbLoai.Size = new System.Drawing.Size(28, 13);
-            this.lbLoai.TabIndex = 4;
-            this.lbLoai.Text = "data";
-            // 
-            // lbSoNgayThue
-            // 
-            this.lbSoNgayThue.AutoSize = true;
-            this.lbSoNgayThue.Location = new System.Drawing.Point(107, 68);
-            this.lbSoNgayThue.Name = "lbSoNgayThue";
-            this.lbSoNgayThue.Size = new System.Drawing.Size(28, 13);
-            this.lbSoNgayThue.TabIndex = 4;
-            this.lbSoNgayThue.Text = "data";
-            // 
-            // lbGia
-            // 
-            this.lbGia.AutoSize = true;
-            this.lbGia.Location = new System.Drawing.Point(62, 92);
-            this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(28, 13);
-            this.lbGia.TabIndex = 4;
-            this.lbGia.Text = "data";
-            // 
             // lbDateLap
             // 
             this.lbDateLap.AutoSize = true;
-            this.lbDateLap.Location = new System.Drawing.Point(324, 194);
+            this.lbDateLap.Location = new System.Drawing.Point(362, 195);
             this.lbDateLap.Name = "lbDateLap";
             this.lbDateLap.Size = new System.Drawing.Size(28, 13);
             this.lbDateLap.TabIndex = 4;
             this.lbDateLap.Text = "data";
-            // 
-            // lbVAT
-            // 
-            this.lbVAT.AutoSize = true;
-            this.lbVAT.Location = new System.Drawing.Point(101, 17);
-            this.lbVAT.Name = "lbVAT";
-            this.lbVAT.Size = new System.Drawing.Size(28, 13);
-            this.lbVAT.TabIndex = 4;
-            this.lbVAT.Text = "data";
-            // 
-            // lbTongTien
-            // 
-            this.lbTongTien.AutoSize = true;
-            this.lbTongTien.Location = new System.Drawing.Point(75, 43);
-            this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(28, 13);
-            this.lbTongTien.TabIndex = 4;
-            this.lbTongTien.Text = "data";
             // 
             // FormInHoaDon
             // 
@@ -524,7 +501,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label abel10;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -543,7 +519,6 @@
         private System.Windows.Forms.Label lbTenKH;
         private System.Windows.Forms.Label lbGia;
         private System.Windows.Forms.Label lbSoNgayThue;
-        private System.Windows.Forms.Label lbLoai;
         private System.Windows.Forms.Label lbTenXe;
         private System.Windows.Forms.Label lbDateLap;
         private System.Windows.Forms.Label lbTongTien;
