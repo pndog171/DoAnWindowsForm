@@ -199,7 +199,18 @@ namespace GUi
 
         private void btnInHD_Click(object sender, EventArgs e)
         {
-
+            FormInHoaDon frm = new FormInHoaDon();
+            frm.TenKH =cbbKhachHang.Text;
+            frm.TenNV = cbbNhanVien.Text;
+            frm.SoNgayThue = txtSoNgayThue.Text;
+            frm.TenXe = cbbTenXe.Text;
+            frm.Gia = txtGia.Text;
+            frm.DateLap = dateXuatDon.Text;
+            frm.DateNhan = dateNhanXe.Text;
+            frm.DateTra = dateTraXe.Text;
+            frm.TongTien = txtTongTien.Text;
+            frm.VAT= txtVAT.Text+" %";
+            frm.ShowDialog();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

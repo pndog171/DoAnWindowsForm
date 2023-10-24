@@ -13,6 +13,8 @@ namespace GUi
     public partial class FormInHoaDon : Form
     {
         public string DateLap, DateNhan, DateTra, TenKH, TenXe, TenLoai, TenNV, SoNgayThue, Gia, VAT, TongTien;
+
+
         public FormInHoaDon()
         {
             InitializeComponent();
@@ -20,11 +22,10 @@ namespace GUi
 
         private void FormInHoaDon_Load(object sender, EventArgs e)
         {
-            lbNgayLap.Text = DateLap;
+            lbDateLap.Text = DateLap;
             lbTenKH.Text = TenKH;
             lbTenNV.Text = TenNV;
             lbTenXe.Text = TenXe;
-            lbLoai.Text = TenLoai;
             lbDateNhan.Text = DateNhan;
             lbDateTra.Text = DateTra;
             lbSoNgayThue.Text = SoNgayThue;
