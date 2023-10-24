@@ -253,6 +253,76 @@ namespace GUi
                 BindGridXeMay(pt.FindByName(txtTim.Text));
             }
         }
+
+        private void txtMaXe_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtTenXe.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                txtDonGia.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtTenXe_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMau.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                txtTenXe.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtMau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                cbLoaiXe.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                txtTenXe.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void cbLoaiXe_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMau.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                txtDonGia.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtDonGia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txtMaXe.Focus();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                cbLoaiXe.Focus();
+                e.Handled = true;
+            }
+        }
     }
    
 }

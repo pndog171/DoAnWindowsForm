@@ -258,5 +258,7 @@ namespace GUi
                 MessageBox.Show("Xin vui lòng nhập đầy đủ các thông tin còn thiếu !");
             }
         }
+
+   
     }
 }

@@ -332,7 +332,7 @@
             // 
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThoat.Image = global::GUi.Properties.Resources.log_out;
-            this.btnThoat.Location = new System.Drawing.Point(11, 7);
+            this.btnThoat.Location = new System.Drawing.Point(6, 5);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(42, 43);
