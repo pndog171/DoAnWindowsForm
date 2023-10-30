@@ -177,6 +177,7 @@
             // 
             // dtGVNV
             // 
+            this.dtGVNV.AllowUserToAddRows = false;
             this.dtGVNV.BackgroundColor = System.Drawing.Color.White;
             this.dtGVNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGVNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -193,6 +194,7 @@
             this.dtGVNV.RowTemplate.Height = 24;
             this.dtGVNV.Size = new System.Drawing.Size(507, 263);
             this.dtGVNV.TabIndex = 30;
+            this.dtGVNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVNV_CellContentClick);
             // 
             // Column1
             // 
@@ -237,6 +239,10 @@
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
             this.cbGioiTinh.Location = new System.Drawing.Point(313, 123);
             this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.cbGioiTinh.Name = "cbGioiTinh";
@@ -355,6 +361,7 @@
             this.Name = "FormThemTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemTaiKhoan";
+            this.Load += new System.EventHandler(this.FormThemTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGVNV)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -20,12 +20,11 @@ namespace GUi
         {
             InitializeComponent();
         }
-        private readonly TaiKhoanService gtService = new TaiKhoanService();
-        private readonly Dangky dkService = new Dangky();
+        private readonly TaiKhoanService dkService = new TaiKhoanService();
         private TaiKhoan model = new TaiKhoan();
         private void FormDangKy_Load(object sender, EventArgs e)
         {
-            var listGioiTinh = gtService.GetAll();
+            var listGioiTinh = dkService.GetAll();
             FillGioiTinhCombobox(listGioiTinh);
         }
 
@@ -145,7 +144,7 @@ namespace GUi
             }
         }
 
-        private readonly Dangky dangky = new Dangky();
+        private readonly TaiKhoanService dangky = new TaiKhoanService();
         private TaiKhoan taiKhoan = new TaiKhoan();
 
 

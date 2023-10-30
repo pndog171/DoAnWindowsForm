@@ -11,6 +11,7 @@ using DAL.Entities;
 using BUS.Service;
 using DevExpress.XtraEditors.Popup;
 using System.Drawing.Text;
+using System.Data.Entity.Validation;
 
 namespace GUi
 {
@@ -18,54 +19,41 @@ namespace GUi
     {
         private TaiKhoan tk = new TaiKhoan();
         private readonly TaiKhoanService tksv = new TaiKhoanService();
-        private readonly Model1 context = new Model1();
+        private readonly Model1 ct = new Model1();
         public FormThemTaiKhoan()
         {
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormThemTaiKhoan_Load(object sender, EventArgs e)
         {
             try
             {
                 var listTaiKhoan = tksv.GetAll();
-                FillGenderComboBox(listTaiKhoan);
                 BindgridN(listTaiKhoan);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtGVNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dtGVNV.CurrentRow.Index != -1)
+            if (dtGVNV.CurrentRow.Index != -1)
             {
                 tk.TenTK = dtGVNV.CurrentRow.Cells[0].Value.ToString();
                 using (Model1 db = new Model1())
                 {
-                    tk = db.TaiKhoans.Where( x => x.TenTK == tk.TenTK ).FirstOrDefault();
+                    tk = db.TaiKhoans.Where(x => x.TenTK == tk.TenTK).FirstOrDefault();
                     txtTenTK.Text = tk.TenTK.ToString();
                     txtMK.Text = tk.MatKhau.ToString();
                     txtFullName.Text = tk.TenNguoiDung.ToString();
                     txtSdth.Text = tk.SDT.ToString();
-                    foreach(var item in cbGioiTinh.Items)
-                    {
-                        if(((TaiKhoan)item).GioiTinh == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
-                            .ToString())
-                        {
-                            cbGioiTinh.SelectedItem = item;
-                            break;
-                        }
-                    }
+                    cbGioiTinh.Text=tk.GioiTinh.ToString();
+                    txtEmail.Text=tk.email.ToString();
                 }
             }
         }
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -84,9 +72,16 @@ namespace GUi
                 MessageBox.Show("Thêm dữ liệu thành công");
                 clearValue();
                 BindgridN(tksv.GetAll());
-            }catch(Exception ex)
+            }
+            catch (DbEntityValidationException ex)
             {
-                MessageBox.Show(ex.Message);
+                foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in entityValidationErrors.ValidationErrors)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                    }
+                }
             }
         }
 
@@ -123,7 +118,7 @@ namespace GUi
                     
                 }
                 ShowDialogDelete();
-                BindgridN(context.TaiKhoans.ToList());
+                BindgridN(ct.TaiKhoans.ToList());
             }
             catch(Exception ex)
             {
@@ -151,13 +146,6 @@ namespace GUi
                 }
             }
         }
-        private void FillGenderComboBox(List<TaiKhoan> accountlist)
-        {
-            accountlist.Insert(0, new TaiKhoan());
-            this.cbGioiTinh.DataSource = accountlist;
-            this.cbGioiTinh.DisplayMember = "GioiTinh";
-            this.cbGioiTinh.ValueMember = "GioiTinh";
-        }
         private bool checkValue()
         {
             if (txtTenTK.Text == "" || txtMK.Text == "" || txtEmail.Text == "" || txtFullName.Text == "" || txtSdth.Text == "")
@@ -172,19 +160,18 @@ namespace GUi
         }
         private void getValue()
         {
-            string selectedGender = (string)cbGioiTinh.SelectedValue;
             tk.TenTK = txtTenTK.Text;
             tk.MatKhau = txtMK.Text;
             tk.email = txtEmail.Text;
             tk.TenNguoiDung = txtFullName.Text;
             tk.SDT = txtSdth.Text;
-            tk.GioiTinh = selectedGender;
+            tk.GioiTinh = cbGioiTinh.Text;
         }
-        private int GetSelectedRow( string nameaccount)
+        private int GetSelectedRow(string taikhoan) //GETSELECTEDROW
         {
-            for(int i = 0; i< dtGVNV.Rows.Count; i++)
+            for (int i = 0; i < dtGVNV.Rows.Count; i++)
             {
-                if (dtGVNV.Rows[i].Cells[0].Value.ToString() == nameaccount)
+                if (dtGVNV.Rows[i].Cells[0].Value.ToString() == taikhoan)
                 {
                     return i;
                 }
@@ -195,17 +182,19 @@ namespace GUi
         {
             try
             {
-                var updating = context.TaiKhoans.Find(nameaccount);
+                var updating = ct.TaiKhoans.Find(nameaccount);
                 if(updating != null)
                 {
                     updating.TenTK = txtTenTK.Text;
+                    updating.TenNguoiDung=txtFullName.Text;
                     updating.MatKhau = txtMK.Text;
-                    var selectedUpdate = (TaiKhoan)cbGioiTinh.SelectedItem;
-                    string IDGioiTinh = selectedUpdate.GioiTinh;
-                    updating.GioiTinh = IDGioiTinh;
-                    context.SaveChanges();
+                    updating.SDT = txtSdth.Text;
+                    updating.email = txtEmail.Text;
+                    updating.GioiTinh = cbGioiTinh.Text;
+                    ct.SaveChanges();
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -215,14 +204,14 @@ namespace GUi
         {
             using (var context = new Model1())
             {
-                var Deleting = context.TaiKhoans.Find(nameaccount);
+                var Deleting = ct.TaiKhoans.Find(nameaccount);
                 if(Deleting != null)
                 {
-                    context.TaiKhoans.Remove(Deleting);
-                    context.SaveChanges();
+                    ct.TaiKhoans.Remove(Deleting);
+                    ct.SaveChanges();
                 }
             }
-            BindgridN(context.TaiKhoans.ToList());
+            BindgridN(ct.TaiKhoans.ToList());
             clearValue();
         }
         private void ShowDialogDelete()

@@ -161,15 +161,14 @@ namespace GUi
                 int n = getSelectedRow(txtMaXe.Text.ToString());
                 if (!checkValue())
                 {
-                    throw new Exception("Vui long nhap day du thong tin!!!");
+                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
                 }
                 if (n == -1)
                 {
                     getValue();
                     pt.InsertUpdate(xe);
-
                 }
-                MessageBox.Show("Them xe thanh cong");
+                MessageBox.Show("Thêm xe thành công");
                 clearValue();
                 BindGridXeMay(pt.GetAll());
             }
