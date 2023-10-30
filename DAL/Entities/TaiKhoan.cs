@@ -34,10 +34,8 @@ namespace DAL.Entities
         public string SDT { get; set; }
 
         [Required]
-        [StringLength(1)]
-        public string MaGioiTinh { get; set; }
-
-        public virtual GioiTinh GioiTinh { get; set; }
+        [StringLength(20)]
+        public string GioiTinh { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

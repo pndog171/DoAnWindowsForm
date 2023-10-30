@@ -20,7 +20,7 @@ namespace GUi
         {
             InitializeComponent();
         }
-        private readonly GioiTinhService gtService = new GioiTinhService();
+        private readonly TaiKhoanService gtService = new TaiKhoanService();
         private readonly Dangky dkService = new Dangky();
         private TaiKhoan model = new TaiKhoan();
         private void FormDangKy_Load(object sender, EventArgs e)
@@ -150,12 +150,12 @@ namespace GUi
 
 
 
-        private void FillGioiTinhCombobox(List<GioiTinh> listGioiTinhs)
+        private void FillGioiTinhCombobox(List<TaiKhoan> listGioiTinhs)
         {
-            listGioiTinhs.Insert(0, new GioiTinh());
+            listGioiTinhs.Insert(0, new TaiKhoan());
             this.cbbgioitinh.DataSource = listGioiTinhs;
-            this.cbbgioitinh.DisplayMember = "GioiTinh1";
-            this.cbbgioitinh.ValueMember = "MaGioiTinh";
+            this.cbbgioitinh.DisplayMember = "GioiTinh";
+            this.cbbgioitinh.ValueMember = "GioiTinh";
         }
         private void ClearValue()
         {
@@ -229,7 +229,7 @@ namespace GUi
             model.SDT = txtSoDienThoai.Text;
             model.email = txtEmail.Text;
             model.MatKhau = txtMatKhau.Text;
-            model.MaGioiTinh = selectedGioiTinh;
+            model.GioiTinh = selectedGioiTinh;
         }
 
         private void btnDangKy_Click_1(object sender, EventArgs e)

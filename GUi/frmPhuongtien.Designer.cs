@@ -53,10 +53,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DtGVTrangThaiXe = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVXemay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtGVTrangThaiXe)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -198,7 +208,7 @@
             this.dtGVXemay.Name = "dtGVXemay";
             this.dtGVXemay.RowHeadersWidth = 51;
             this.dtGVXemay.RowTemplate.Height = 24;
-            this.dtGVXemay.Size = new System.Drawing.Size(507, 263);
+            this.dtGVXemay.Size = new System.Drawing.Size(677, 263);
             this.dtGVXemay.TabIndex = 11;
             this.dtGVXemay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVXemay_CellContentClick);
             // 
@@ -241,7 +251,7 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSua.Location = new System.Drawing.Point(23, 190);
+            this.btnSua.Location = new System.Drawing.Point(23, 189);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 19);
             this.btnSua.TabIndex = 24;
@@ -253,7 +263,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(167, 30);
+            this.label7.Location = new System.Drawing.Point(358, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(383, 31);
             this.label7.TabIndex = 26;
@@ -299,9 +309,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbLoaiXe);
-            this.groupBox1.Location = new System.Drawing.Point(7, 85);
+            this.groupBox1.Location = new System.Drawing.Point(7, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 285);
+            this.groupBox1.Size = new System.Drawing.Size(200, 277);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
@@ -312,10 +322,95 @@
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Location = new System.Drawing.Point(724, 108);
+            this.panel1.Location = new System.Drawing.Point(905, 109);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(107, 262);
             this.panel1.TabIndex = 32;
+            // 
+            // DtGVTrangThaiXe
+            // 
+            this.DtGVTrangThaiXe.AllowUserToAddRows = false;
+            this.DtGVTrangThaiXe.BackgroundColor = System.Drawing.Color.White;
+            this.DtGVTrangThaiXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtGVTrangThaiXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.Column6,
+            this.Column7});
+            this.DtGVTrangThaiXe.Location = new System.Drawing.Point(7, 406);
+            this.DtGVTrangThaiXe.Margin = new System.Windows.Forms.Padding(2);
+            this.DtGVTrangThaiXe.Name = "DtGVTrangThaiXe";
+            this.DtGVTrangThaiXe.RowHeadersWidth = 51;
+            this.DtGVTrangThaiXe.RowTemplate.Height = 24;
+            this.DtGVTrangThaiXe.Size = new System.Drawing.Size(882, 263);
+            this.DtGVTrangThaiXe.TabIndex = 33;
+            this.DtGVTrangThaiXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGVTrangThaiXe_CellContentClick);
+            this.DtGVTrangThaiXe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtGVTrangThaiXe_CellFormatting);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã xe";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên xe";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Màu xe";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Loại xe";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Khách hàng thuê";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Đang thuê";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(382, 373);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(230, 31);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "XE ĐANG THUÊ";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(905, 406);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 92);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Trả xe";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPhuongtien
             // 
@@ -323,7 +418,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(833, 375);
+            this.ClientSize = new System.Drawing.Size(1020, 703);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.DtGVTrangThaiXe);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -342,6 +440,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DtGVTrangThaiXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +473,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView DtGVTrangThaiXe;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column7;
     }
 }

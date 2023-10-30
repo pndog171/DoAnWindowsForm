@@ -18,7 +18,6 @@ namespace GUi
     {
         private TaiKhoan tk = new TaiKhoan();
         private readonly TaiKhoanService tksv = new TaiKhoanService();
-        private readonly GioiTinhService gtsv = new GioiTinhService();
         private readonly Model1 context = new Model1();
         public FormThemTaiKhoan()
         {
@@ -34,9 +33,8 @@ namespace GUi
         {
             try
             {
-                var listGioiTinh = gtsv.GetAll();
                 var listTaiKhoan = tksv.GetAll();
-                FillGenderComboBox(listGioiTinh);
+                FillGenderComboBox(listTaiKhoan);
                 BindgridN(listTaiKhoan);
             }catch (Exception ex)
             {
@@ -58,7 +56,7 @@ namespace GUi
                     txtSdth.Text = tk.SDT.ToString();
                     foreach(var item in cbGioiTinh.Items)
                     {
-                        if(((GioiTinh)item).GioiTinh1 == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
+                        if(((TaiKhoan)item).GioiTinh == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
                             .ToString())
                         {
                             cbGioiTinh.SelectedItem = item;
@@ -149,16 +147,16 @@ namespace GUi
                 dtGVNV.Rows[index].Cells[4].Value = i.SDT;
                 if (i.GioiTinh != null)
                 {
-                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh.GioiTinh1;
+                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh;
                 }
             }
         }
-        private void FillGenderComboBox(List<GioiTinh> accountlist)
+        private void FillGenderComboBox(List<TaiKhoan> accountlist)
         {
-            accountlist.Insert(0, new GioiTinh());
+            accountlist.Insert(0, new TaiKhoan());
             this.cbGioiTinh.DataSource = accountlist;
-            this.cbGioiTinh.DisplayMember = "GioiTinh1";
-            this.cbGioiTinh.ValueMember = "MaGioiTinh";
+            this.cbGioiTinh.DisplayMember = "GioiTinh";
+            this.cbGioiTinh.ValueMember = "GioiTinh";
         }
         private bool checkValue()
         {
@@ -180,7 +178,7 @@ namespace GUi
             tk.email = txtEmail.Text;
             tk.TenNguoiDung = txtFullName.Text;
             tk.SDT = txtSdth.Text;
-            tk.MaGioiTinh = selectedGender;
+            tk.GioiTinh = selectedGender;
         }
         private int GetSelectedRow( string nameaccount)
         {
@@ -202,9 +200,9 @@ namespace GUi
                 {
                     updating.TenTK = txtTenTK.Text;
                     updating.MatKhau = txtMK.Text;
-                    var selectedUpdate = (GioiTinh)cbGioiTinh.SelectedItem;
-                    string IDGioiTinh = selectedUpdate.GioiTinh1;
-                    updating.MaGioiTinh = IDGioiTinh;
+                    var selectedUpdate = (TaiKhoan)cbGioiTinh.SelectedItem;
+                    string IDGioiTinh = selectedUpdate.GioiTinh;
+                    updating.GioiTinh = IDGioiTinh;
                     context.SaveChanges();
                 }
             }catch(Exception ex)

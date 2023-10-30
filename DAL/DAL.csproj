@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\GioiTinh.cs" />
     <Compile Include="Entities\HoaDon.cs" />
     <Compile Include="Entities\KhachHang.cs" />
     <Compile Include="Entities\LoaiXe.cs" />

@@ -12,7 +12,6 @@ namespace DAL.Entities
         {
         }
 
-        public virtual DbSet<GioiTinh> GioiTinhs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiXe> LoaiXes { get; set; }
@@ -21,16 +20,6 @@ namespace DAL.Entities
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<GioiTinh>()
-                .Property(e => e.MaGioiTinh)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<GioiTinh>()
-                .HasMany(e => e.TaiKhoans)
-                .WithRequired(e => e.GioiTinh)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<HoaDon>()
                 .Property(e => e.MaHD)
                 .IsFixedLength();
@@ -92,11 +81,6 @@ namespace DAL.Entities
 
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.SDT)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TaiKhoan>()
-                .Property(e => e.MaGioiTinh)
                 .IsFixedLength()
                 .IsUnicode(false);
 

@@ -15,6 +15,7 @@ namespace GUi
     public partial class frmPhuongtien : Form
     {
         private readonly Phuongtien pt = new Phuongtien();
+        private readonly HoaDonService hd = new HoaDonService(); 
         private readonly Loaiphuongtien lpt = new Loaiphuongtien();
         private readonly Model1 context = new Model1();
         private Xe xe = new Xe();
@@ -27,15 +28,17 @@ namespace GUi
         {
             
         }
-
+        
         private void frmPhuongtien_Load(object sender, EventArgs e)
         {
             try
             {
                 var listTheloai = lpt.GetAllType();
                 var listXe = pt.GetAll();
+                var listHD= hd.GetAll();
                 FillTypeofXeCombobox(listTheloai);
                 BindGridXeMay(listXe);
+                BindTrangThai(listHD);
             }
             catch (Exception ex)
             {
@@ -50,6 +53,19 @@ namespace GUi
                 {
                     return i;
                 }
+                 
+            }
+            return -1;
+        }
+        private int getSelectedRowTT(string maxe) //GETSELECTEDROW
+        {
+            for (int i = 0; i < DtGVTrangThaiXe.Rows.Count; i++)
+            {
+                if (DtGVTrangThaiXe.Rows[i].Cells[0].Value.ToString() == maxe)
+                {
+                    return i;
+                }
+
             }
             return -1;
         }
@@ -77,6 +93,21 @@ namespace GUi
                     dtGVXemay.Rows[index].Cells[3].Value = x.LoaiXe.TenLoai;
                 }
                 dtGVXemay.Rows[index].Cells[4].Value = x.DonGia.ToString();
+            }
+        }
+        private void BindTrangThai(List<HoaDon> xe) //BINDGRID Trang thai xe
+        {
+            DtGVTrangThaiXe.Rows.Clear();
+            foreach (HoaDon x in xe)
+            {
+                int index = DtGVTrangThaiXe.Rows.Add();
+                DtGVTrangThaiXe.Rows[index].Cells[0].Value = x.MaXe;
+                DtGVTrangThaiXe.Rows[index].Cells[1].Value = x.Xe.TenXe;
+
+                DtGVTrangThaiXe.Rows[index].Cells[2].Value = x.Xe.Mau;
+                DtGVTrangThaiXe.Rows[index].Cells[3].Value = x.Xe.LoaiXe.TenLoai;
+                DtGVTrangThaiXe.Rows[index].Cells[4].Value = x.KhachHang.TenKH;
+                DtGVTrangThaiXe.Rows[index].Cells[5].Value = x.Xe.Status;
             }
         }
         private void FillTypeofXeCombobox(List<LoaiXe> loaiXes) //FILL
@@ -188,7 +219,23 @@ namespace GUi
             }
             BindGridXeMay(context.Xes.ToList());
         }
+        private void updateRowTT(string maxe) //UPDATEROW 
+        {
+            try
+            {
+                var xeUpdate = context.Xes.Find(maxe);
+                if (xeUpdate != null)
+                {
+                    xeUpdate.Status = false;
+                    context.SaveChanges();
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void updateRow(string maxe) //UPDATEROW 
         {
             try
@@ -321,6 +368,62 @@ namespace GUi
             {
                 cbLoaiXe.Focus();
                 e.Handled = true;
+            }
+        }
+
+        private void DtGVTrangThaiXe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach(DataGridViewRow r in DtGVTrangThaiXe.Rows)
+            {
+                bool is_True = Convert.ToBoolean(r.Cells[5].Value);
+                if (is_True==false)
+                {
+                    r.DefaultCellStyle.BackColor = Color.Red;
+                    r.DefaultCellStyle.ForeColor = Color.White;
+                }
+                else if(is_True == true)
+                {
+                    r.DefaultCellStyle.BackColor = Color.Green;
+                    r.DefaultCellStyle.ForeColor = Color.Yellow;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                updateRowTT(txtMaXe.Text);
+                MessageBox.Show("Tra xe thanh cong");          
+                BindTrangThai(hd.GetAll());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DtGVTrangThaiXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtGVXemay.CurrentRow.Index != -1)
+            {
+                xe.MaXe = DtGVTrangThaiXe.CurrentRow.Cells[0].Value.ToString();
+                using (Model1 db = new Model1())
+                {
+                    xe = db.Xes.Where(x => x.MaXe == xe.MaXe).FirstOrDefault();
+                    txtMaXe.Text = xe.MaXe.ToString();
+                    txtTenXe.Text = xe.TenXe.ToString();
+                    txtMau.Text = xe.Mau.ToString();
+                    foreach (var item in cbLoaiXe.Items)
+                    {
+                        if (((LoaiXe)item).TenLoai == DtGVTrangThaiXe.Rows[DtGVTrangThaiXe.CurrentRow.Index].Cells[3].Value.ToString())
+                        {
+                            cbLoaiXe.SelectedItem = item;
+                            break;
+                        }
+                    }
+                    txtDonGia.Text = xe.DonGia.ToString();
+                }
             }
         }
     }
