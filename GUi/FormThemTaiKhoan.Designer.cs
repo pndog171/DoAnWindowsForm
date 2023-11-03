@@ -166,6 +166,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(114, 20);
             this.txtMK.TabIndex = 33;
+            this.txtMK.UseSystemPasswordChar = true;
             // 
             // txtTenTK
             // 

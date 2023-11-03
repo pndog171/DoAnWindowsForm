@@ -27,7 +27,6 @@ namespace GUi
         private void FormDangKy_Load(object sender, EventArgs e)
         {
             var listGioiTinh = dkService.GetAll();
-            FillGioiTinhCombobox(listGioiTinh);
         }
 
 
@@ -144,15 +143,6 @@ namespace GUi
         private readonly TaiKhoanService dangky = new TaiKhoanService();
         private TaiKhoan taiKhoan = new TaiKhoan();
 
-
-
-        private void FillGioiTinhCombobox(List<TaiKhoan> listGioiTinhs)
-        {
-            listGioiTinhs.Insert(0, new TaiKhoan());
-            this.cbbgioitinh.DataSource = listGioiTinhs;
-            this.cbbgioitinh.DisplayMember = "GioiTinh";
-            this.cbbgioitinh.ValueMember = "GioiTinh";
-        }
         private void ClearValue()
         {
             txtTenTaiKhoan.Text = "";
@@ -205,7 +195,6 @@ namespace GUi
                 MessageBox.Show("Vui lòng nhập số điện thoại.");
                 return false;
             }
-
             return true;
         }
 
@@ -219,13 +208,12 @@ namespace GUi
         
         private void getValue()
         {
-            string selectedGioiTinh = (string)cbbgioitinh.SelectedValue;
             model.TenTK = txtTenTaiKhoan.Text;
             model.TenNguoiDung = txtTenNguoiDung.Text;
             model.SDT = txtSoDienThoai.Text;
             model.email = txtEmail.Text;
             model.MatKhau = GlobalFunc.CalculateMD5Hash(txtMatKhau.Text.Trim());
-            model.GioiTinh = selectedGioiTinh;
+            model.GioiTinh = cbbgioitinh.Text;
         }
 
         private void btnDangKy_Click_1(object sender, EventArgs e)
@@ -233,7 +221,6 @@ namespace GUi
             if (Check())
             {
                 string tentk = txtTenTaiKhoan.Text;
-                string @email = txtEmail.Text;
                 if (KiemTraTaiKhoanTonTai(tentk))
                 {
                     MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
@@ -253,22 +240,6 @@ namespace GUi
             {
                 MessageBox.Show("Xin vui lòng nhập đầy đủ các thông tin còn thiếu !");
             }
-        }
-
-        public string Encrypt (string decrypted) 
-        {
-            string hash = "Password@2023";
-            byte[] data = UTF8Encoding.UTF8.GetBytes(decrypted);
-
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            TripleDESCryptoServiceProvider tripDES = new TripleDESCryptoServiceProvider();
-
-            tripDES.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
-            tripDES.Mode = CipherMode.ECB;
-
-            ICryptoTransform tf = tripDES.CreateEncryptor();
-            byte[] result = tf.TransformFinalBlock(data, 0, data.Length);
-            return Convert.ToBase64String(result);
         }
     }
 }

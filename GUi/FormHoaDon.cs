@@ -105,21 +105,6 @@ namespace GUi
                 //txtKhachHang.Text = ...
             }
         }
-        /*private void SoNT(string snt)
-        {
-            if (string.IsNullOrEmpty(snt) || snt==" ")
-            {
-                txtSoNgayThue.Text = null;
-            }
-            else
-            {
-                decimal Gia = decimal.Parse(txtGia.Text);
-                decimal SNthue = decimal.Parse(txtSoNgayThue.Text);
-                decimal Tax = decimal.Parse(txtVAT.Text);
-                decimal result = Gia * SNthue * ((Tax + 100) / 100);
-                txtTongTien.Text = result.ToString();
-            }
-        }*/
 
         
 

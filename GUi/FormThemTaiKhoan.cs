@@ -12,6 +12,7 @@ using BUS.Service;
 using DevExpress.XtraEditors.Popup;
 using System.Drawing.Text;
 using System.Data.Entity.Validation;
+using System.Text.RegularExpressions;
 
 namespace GUi
 {
@@ -60,16 +61,22 @@ namespace GUi
             try
             {
                 int n = GetSelectedRow(txtTenTK.Text.ToString());
-                if (!checkValue())
+                if (Check())
                 {
-                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
-
-                }if(n == -1)
+                    string tentk = txtTenTK.Text;
+                    if (KiemTraTaiKhoanTonTai(tentk))
+                    {
+                        MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
+                    }
+                }
+                else
+                if(n == -1)
                 {
                     getValue();
                     tksv.InsertUpdate(tk);
+                    MessageBox.Show("Thêm dữ liệu thành công");
                 }
-                MessageBox.Show("Thêm dữ liệu thành công");
+                
                 clearValue();
                 BindgridN(tksv.GetAll());
             }
@@ -90,11 +97,16 @@ namespace GUi
             try
             {
                 int n = GetSelectedRow(txtTenTK.Text.ToString());
-                if (!checkValue())
+                if (Check())
                 {
-                    throw new Exception("Vui lòng nhập đủ thông tin!");
+                    string tentk = txtTenTK.Text;
+                    if (KiemTraTaiKhoanTonTai(tentk))
+                    {
+                        MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
+                    }
                 }
-                if( n != -1)
+                else
+                if ( n != -1)
                 {
                     UpdateRow(txtTenTK.Text);
                 }
@@ -237,6 +249,53 @@ namespace GUi
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        private bool Check()
+        {
+
+            if (string.IsNullOrEmpty(txtTenTK.Text) || txtTenTK.Text.Length < 6)
+            {
+                MessageBox.Show("Tên tài khoản phải chứa ít nhất 6 ký tự.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtMK.Text) || txtMK.Text.Length < 8)
+            {
+                MessageBox.Show("Mật khẩu phải chứa ít nhất 8 ký tự.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ email.");
+                return false;
+            }
+            if (!KiemTraEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Địa chỉ email không hợp lệ.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtFullName.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên người dùng.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtSdth.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại.");
+                return false;
+            }
+            return true;
+        }
+        private bool KiemTraTaiKhoanTonTai(string tentk)
+        {
+            using (var context = new Model1())
+            {
+                return context.TaiKhoans.Any(p => p.TenTK == tentk);
+            }
+        }
+        private bool KiemTraEmail(string email)
+        {
+            string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            return Regex.IsMatch(email, pattern);
         }
     }
 }

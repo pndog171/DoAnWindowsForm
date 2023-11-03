@@ -286,7 +286,5 @@ namespace GUi
         {
             this.Hide();
         }
-
-     
     }
 }

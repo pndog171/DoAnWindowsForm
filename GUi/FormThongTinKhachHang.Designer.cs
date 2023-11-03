@@ -55,6 +55,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVKhachHang)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -214,9 +217,9 @@
             this.label4.Location = new System.Drawing.Point(273, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.Size = new System.Drawing.Size(101, 13);
             this.label4.TabIndex = 58;
-            this.label4.Text = "Cang cuoc cong dan";
+            this.label4.Text = "Căn cước công dân";
             // 
             // txtCCCD
             // 
@@ -228,6 +231,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
@@ -244,7 +250,7 @@
             this.btnThem.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Image = global::GUi.Properties.Resources.add_file;
-            this.btnThem.Location = new System.Drawing.Point(23, 72);
+            this.btnThem.Location = new System.Drawing.Point(82, 72);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 32);
@@ -256,7 +262,7 @@
             // 
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Image = global::GUi.Properties.Resources.delete;
-            this.btnXoa.Location = new System.Drawing.Point(23, 127);
+            this.btnXoa.Location = new System.Drawing.Point(82, 128);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 32);
@@ -268,7 +274,7 @@
             // 
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSua.Image = global::GUi.Properties.Resources.maintenance;
-            this.btnSua.Location = new System.Drawing.Point(23, 189);
+            this.btnSua.Location = new System.Drawing.Point(82, 189);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 32);
             this.btnSua.TabIndex = 65;
@@ -328,6 +334,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(52, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Lưu";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(52, 128);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 13);
+            this.label10.TabIndex = 71;
+            this.label10.Text = "Xóa";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(52, 189);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "Sửa";
+            // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,5 +422,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
