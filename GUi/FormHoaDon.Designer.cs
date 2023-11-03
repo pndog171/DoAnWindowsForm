@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateNhanXe = new System.Windows.Forms.DateTimePicker();
@@ -52,12 +51,13 @@
             this.dateXuatDon = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnxemhoadon = new System.Windows.Forms.Button();
+            this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.txtVAT = new DevExpress.XtraEditors.TextEdit();
             this.txtGia = new DevExpress.XtraEditors.TextEdit();
             this.txtTongTien = new DevExpress.XtraEditors.TextEdit();
@@ -122,15 +122,6 @@
             this.label17.Size = new System.Drawing.Size(50, 13);
             this.label17.TabIndex = 25;
             this.label17.Text = "Tính tiền";
-            // 
-            // btnTinhTien
-            // 
-            this.btnTinhTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.ImageOptions.Image")));
-            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
-            this.btnTinhTien.Name = "btnTinhTien";
-            this.btnTinhTien.Size = new System.Drawing.Size(40, 38);
-            this.btnTinhTien.TabIndex = 24;
-            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // label13
             // 
@@ -300,24 +291,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã hóa đơn";
             // 
-            // btnInHD
-            // 
-            this.btnInHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.ImageOptions.Image")));
-            this.btnInHD.Location = new System.Drawing.Point(697, 307);
-            this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(42, 38);
-            this.btnInHD.TabIndex = 3;
-            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(609, 307);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(43, 38);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -350,11 +323,38 @@
             this.btnxemhoadon.BackColor = System.Drawing.Color.White;
             this.btnxemhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnxemhoadon.Image = global::GUi.Properties.Resources.search1;
-            this.btnxemhoadon.Location = new System.Drawing.Point(501, 306);
+            this.btnxemhoadon.Location = new System.Drawing.Point(512, 307);
             this.btnxemhoadon.Name = "btnxemhoadon";
-            this.btnxemhoadon.Size = new System.Drawing.Size(48, 39);
+            this.btnxemhoadon.Size = new System.Drawing.Size(36, 39);
             this.btnxemhoadon.TabIndex = 5;
             this.btnxemhoadon.UseVisualStyleBackColor = false;
+            // 
+            // btnInHD
+            // 
+            this.btnInHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.ImageOptions.Image")));
+            this.btnInHD.Location = new System.Drawing.Point(701, 307);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(41, 38);
+            this.btnInHD.TabIndex = 3;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(613, 307);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(34, 38);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnTinhTien
+            // 
+            this.btnTinhTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.ImageOptions.Image")));
+            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
+            this.btnTinhTien.Name = "btnTinhTien";
+            this.btnTinhTien.Size = new System.Drawing.Size(40, 38);
+            this.btnTinhTien.TabIndex = 24;
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // txtVAT
             // 
