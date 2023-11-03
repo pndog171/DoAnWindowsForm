@@ -20,7 +20,7 @@ namespace DAL.Entities
         public string TenTK { get; set; }
 
         [Required]
-        [StringLength(23)]
+        [StringLength(60)]
         public string MatKhau { get; set; }
 
         [StringLength(50)]

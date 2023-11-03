@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using BUS.Service;
 using DAL.Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
+using DevExpress.Utils.DirectXPaint;
 
 namespace GUi
 {
@@ -38,11 +40,6 @@ namespace GUi
                 this.Hide();
                 frmdn.ShowDialog();
             }
-        }
-
-        private void btnDangKy_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtTenNguoiDung_KeyDown(object sender, KeyEventArgs e)
@@ -195,7 +192,7 @@ namespace GUi
             }
             if (!KiemTraEmail(txtEmail.Text))
             {
-                MessageBox.Show("Địa chỉ email không hợp lệ. Địa chỉ email phải có đuôi '.com'.");
+                MessageBox.Show("Địa chỉ email không hợp lệ.");
                 return false;
             }
             if (string.IsNullOrEmpty(txtTenNguoiDung.Text))
@@ -227,7 +224,7 @@ namespace GUi
             model.TenNguoiDung = txtTenNguoiDung.Text;
             model.SDT = txtSoDienThoai.Text;
             model.email = txtEmail.Text;
-            model.MatKhau = txtMatKhau.Text;
+            model.MatKhau = GlobalFunc.CalculateMD5Hash(txtMatKhau.Text.Trim());
             model.GioiTinh = selectedGioiTinh;
         }
 
@@ -236,7 +233,7 @@ namespace GUi
             if (Check())
             {
                 string tentk = txtTenTaiKhoan.Text;
-
+                string @email = txtEmail.Text;
                 if (KiemTraTaiKhoanTonTai(tentk))
                 {
                     MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
@@ -258,6 +255,20 @@ namespace GUi
             }
         }
 
-   
+        public string Encrypt (string decrypted) 
+        {
+            string hash = "Password@2023";
+            byte[] data = UTF8Encoding.UTF8.GetBytes(decrypted);
+
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            TripleDESCryptoServiceProvider tripDES = new TripleDESCryptoServiceProvider();
+
+            tripDES.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+            tripDES.Mode = CipherMode.ECB;
+
+            ICryptoTransform tf = tripDES.CreateEncryptor();
+            byte[] result = tf.TransformFinalBlock(data, 0, data.Length);
+            return Convert.ToBase64String(result);
+        }
     }
 }

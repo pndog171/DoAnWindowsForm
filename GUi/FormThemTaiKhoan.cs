@@ -161,7 +161,7 @@ namespace GUi
         private void getValue()
         {
             tk.TenTK = txtTenTK.Text;
-            tk.MatKhau = txtMK.Text;
+            tk.MatKhau = GlobalFunc.CalculateMD5Hash(txtMK.Text.Trim());
             tk.email = txtEmail.Text;
             tk.TenNguoiDung = txtFullName.Text;
             tk.SDT = txtSdth.Text;
@@ -187,7 +187,7 @@ namespace GUi
                 {
                     updating.TenTK = txtTenTK.Text;
                     updating.TenNguoiDung=txtFullName.Text;
-                    updating.MatKhau = txtMK.Text;
+                    updating.MatKhau = GlobalFunc.CalculateMD5Hash(txtMK.Text.Trim());
                     updating.SDT = txtSdth.Text;
                     updating.email = txtEmail.Text;
                     updating.GioiTinh = cbGioiTinh.Text;
