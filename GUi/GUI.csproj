@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormXemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemHoaDon.Designer.cs">
+      <DependentUpon>FormXemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemHoaDon.resx">
+      <DependentUpon>FormXemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhuongtien.resx">
       <DependentUpon>frmPhuongtien.cs</DependentUpon>
