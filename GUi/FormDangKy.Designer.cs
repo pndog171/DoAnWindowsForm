@@ -114,6 +114,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(143, 13);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // txtNhapLaiMatKhau
@@ -123,6 +124,7 @@
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(135, 13);
             this.txtNhapLaiMatKhau.TabIndex = 4;
+            this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
             this.txtNhapLaiMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNhapLaiMatKhau_KeyDown);
             // 
             // txtEmail
@@ -235,6 +237,10 @@
             // 
             this.cbbgioitinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbgioitinh.FormattingEnabled = true;
+            this.cbbgioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
             this.cbbgioitinh.Location = new System.Drawing.Point(116, 120);
             this.cbbgioitinh.Name = "cbbgioitinh";
             this.cbbgioitinh.Size = new System.Drawing.Size(173, 21);
@@ -430,7 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(338, 484);
+            this.ClientSize = new System.Drawing.Size(331, 484);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label3);

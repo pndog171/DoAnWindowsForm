@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDon));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLoaiXe = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,14 +57,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoaDon = new DevExpress.XtraEditors.TextEdit();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnxemhoadon = new System.Windows.Forms.Button();
             this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +84,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtLoaiXe);
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.btnTinhTien);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -100,20 +111,39 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtHoaDon);
-            this.groupBox1.Location = new System.Drawing.Point(21, 59);
+            this.groupBox1.Location = new System.Drawing.Point(12, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 234);
+            this.groupBox1.Size = new System.Drawing.Size(776, 234);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn mới";
             // 
+            // txtLoaiXe
+            // 
+            this.txtLoaiXe.AcceptsReturn = true;
+            this.txtLoaiXe.AllowDrop = true;
+            this.txtLoaiXe.Enabled = false;
+            this.txtLoaiXe.Location = new System.Drawing.Point(689, 18);
+            this.txtLoaiXe.Name = "txtLoaiXe";
+            this.txtLoaiXe.Size = new System.Drawing.Size(78, 20);
+            this.txtLoaiXe.TabIndex = 26;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(527, 183);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 13);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "Tính tiền";
+            // 
             // btnTinhTien
             // 
+            this.btnTinhTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.ImageOptions.Image")));
             this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
             this.btnTinhTien.Name = "btnTinhTien";
-            this.btnTinhTien.Size = new System.Drawing.Size(75, 23);
+            this.btnTinhTien.Size = new System.Drawing.Size(40, 38);
             this.btnTinhTien.TabIndex = 24;
-            this.btnTinhTien.Text = "Tính tiền";
             this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // label13
@@ -155,7 +185,7 @@
             this.txtSoNgayThue.AcceptsReturn = true;
             this.txtSoNgayThue.AllowDrop = true;
             this.txtSoNgayThue.Enabled = false;
-            this.txtSoNgayThue.Location = new System.Drawing.Point(723, 53);
+            this.txtSoNgayThue.Location = new System.Drawing.Point(723, 56);
             this.txtSoNgayThue.Name = "txtSoNgayThue";
             this.txtSoNgayThue.Size = new System.Drawing.Size(44, 20);
             this.txtSoNgayThue.TabIndex = 19;
@@ -164,7 +194,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(646, 60);
+            this.label11.Location = new System.Drawing.Point(646, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 13);
             this.label11.TabIndex = 18;
@@ -318,47 +348,92 @@
             this.txtHoaDon.TabIndex = 0;
             this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
             // 
-            // btnLuu
+            // label14
             // 
-            this.btnLuu.Location = new System.Drawing.Point(418, 304);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(70, 24);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(471, 348);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(115, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Xem thông tin hóa đơn";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(618, 348);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Lưu";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(694, 348);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 13);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "In hóa đơn";
+            // 
+            // btnxemhoadon
+            // 
+            this.btnxemhoadon.BackColor = System.Drawing.Color.White;
+            this.btnxemhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnxemhoadon.Image = global::GUi.Properties.Resources.search1;
+            this.btnxemhoadon.Location = new System.Drawing.Point(512, 307);
+            this.btnxemhoadon.Name = "btnxemhoadon";
+            this.btnxemhoadon.Size = new System.Drawing.Size(36, 39);
+            this.btnxemhoadon.TabIndex = 5;
+            this.btnxemhoadon.UseVisualStyleBackColor = false;
             // 
             // btnInHD
             // 
-            this.btnInHD.Location = new System.Drawing.Point(526, 304);
+            this.btnInHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHD.ImageOptions.Image")));
+            this.btnInHD.Location = new System.Drawing.Point(701, 307);
             this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(70, 24);
+            this.btnInHD.Size = new System.Drawing.Size(41, 38);
             this.btnInHD.TabIndex = 3;
-            this.btnInHD.Text = "In hóa đơn";
             this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
-            // btnThoat
+            // btnLuu
             // 
-            this.btnThoat.Location = new System.Drawing.Point(639, 304);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(70, 24);
-            this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(613, 307);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(34, 38);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUi.Properties.Resources.back1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 354);
-            this.Controls.Add(this.btnThoat);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(800, 370);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnxemhoadon);
             this.Controls.Add(this.btnInHD);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormHoaDon";
             this.Load += new System.EventHandler(this.FormHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -366,6 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,7 +463,6 @@
         private System.Windows.Forms.ComboBox cbbTenXe;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnInHD;
-        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.TextEdit txtTongTien;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -402,5 +477,12 @@
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.TextEdit txtHoaDon;
         private DevExpress.XtraEditors.SimpleButton btnTinhTien;
+        private System.Windows.Forms.Button btnxemhoadon;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtLoaiXe;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

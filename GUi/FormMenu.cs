@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GUi
 {
-    public partial class FormMenu : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class FormMenu : DevExpress.XtraEditors.XtraForm
     {
         private readonly Phuongtien pt = new Phuongtien();
         private readonly Loaiphuongtien lpt = new Loaiphuongtien();
@@ -48,7 +48,7 @@ namespace GUi
         {
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
-                this.Close();
+               Application.Exit();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -80,7 +80,5 @@ namespace GUi
             FormThongTinKhachHang formThongTinKhachHang = new FormThongTinKhachHang();
             formThongTinKhachHang.ShowDialog();
         }
-    }
-
-       
+    }     
 }

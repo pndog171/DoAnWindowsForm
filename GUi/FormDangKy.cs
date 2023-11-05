@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using BUS.Service;
 using DAL.Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
+using DevExpress.Utils.DirectXPaint;
 
 namespace GUi
 {
@@ -20,30 +22,19 @@ namespace GUi
         {
             InitializeComponent();
         }
-        private readonly GioiTinhService gtService = new GioiTinhService();
-        private readonly Dangky dkService = new Dangky();
+        private readonly TaiKhoanService dkService = new TaiKhoanService();
         private TaiKhoan model = new TaiKhoan();
         private void FormDangKy_Load(object sender, EventArgs e)
         {
-            var listGioiTinh = gtService.GetAll();
-            FillGioiTinhCombobox(listGioiTinh);
+            var listGioiTinh = dkService.GetAll();
         }
 
 
         private void picThoat_Click(object sender, EventArgs e)
         {
-            FormDangNhap frmdn = new FormDangNhap();
-            DialogResult DR = MessageBox.Show("Bạn có muốn quay lại màn hình đăng nhập không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
-            {
                 this.Hide();
-                frmdn.ShowDialog();
-            }
-        }
-
-        private void btnDangKy_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtTenNguoiDung_KeyDown(object sender, KeyEventArgs e)
@@ -145,18 +136,9 @@ namespace GUi
             }
         }
 
-        private readonly Dangky dangky = new Dangky();
+        private readonly TaiKhoanService dangky = new TaiKhoanService();
         private TaiKhoan taiKhoan = new TaiKhoan();
 
-
-
-        private void FillGioiTinhCombobox(List<GioiTinh> listGioiTinhs)
-        {
-            listGioiTinhs.Insert(0, new GioiTinh());
-            this.cbbgioitinh.DataSource = listGioiTinhs;
-            this.cbbgioitinh.DisplayMember = "GioiTinh1";
-            this.cbbgioitinh.ValueMember = "MaGioiTinh";
-        }
         private void ClearValue()
         {
             txtTenTaiKhoan.Text = "";
@@ -196,7 +178,7 @@ namespace GUi
             }
             if (!KiemTraEmail(txtEmail.Text))
             {
-                MessageBox.Show("Địa chỉ email không hợp lệ. Địa chỉ email phải có đuôi '.com'.");
+                MessageBox.Show("Địa chỉ email không hợp lệ.");
                 return false;
             }
             if (string.IsNullOrEmpty(txtTenNguoiDung.Text))
@@ -209,7 +191,6 @@ namespace GUi
                 MessageBox.Show("Vui lòng nhập số điện thoại.");
                 return false;
             }
-
             return true;
         }
 
@@ -223,13 +204,12 @@ namespace GUi
         
         private void getValue()
         {
-            string selectedGioiTinh = (string)cbbgioitinh.SelectedValue;
             model.TenTK = txtTenTaiKhoan.Text;
             model.TenNguoiDung = txtTenNguoiDung.Text;
             model.SDT = txtSoDienThoai.Text;
             model.email = txtEmail.Text;
-            model.MatKhau = txtMatKhau.Text;
-            model.MaGioiTinh = selectedGioiTinh;
+            model.MatKhau = GlobalFunc.CalculateMD5Hash(txtMatKhau.Text.Trim());
+            model.GioiTinh = cbbgioitinh.Text;
         }
 
         private void btnDangKy_Click_1(object sender, EventArgs e)
@@ -237,7 +217,6 @@ namespace GUi
             if (Check())
             {
                 string tentk = txtTenTaiKhoan.Text;
-
                 if (KiemTraTaiKhoanTonTai(tentk))
                 {
                     MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");

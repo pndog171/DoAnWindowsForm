@@ -30,5 +30,10 @@ namespace BUS.Service
             context.Xes.Add(xe);
             context.SaveChanges();
         }
+        public Xe CheckStatus(bool name)
+        {
+            Model1 context = new Model1();
+            return context.Xes.FirstOrDefault(p => p.Status == name);
+        }
     }
 }

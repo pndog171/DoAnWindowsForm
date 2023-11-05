@@ -11,6 +11,8 @@ using DAL.Entities;
 using BUS.Service;
 using DevExpress.XtraEditors.Popup;
 using System.Drawing.Text;
+using System.Data.Entity.Validation;
+using System.Text.RegularExpressions;
 
 namespace GUi
 {
@@ -18,77 +20,75 @@ namespace GUi
     {
         private TaiKhoan tk = new TaiKhoan();
         private readonly TaiKhoanService tksv = new TaiKhoanService();
-        private readonly GioiTinhService gtsv = new GioiTinhService();
-        private readonly Model1 context = new Model1();
+        private readonly Model1 ct = new Model1();
         public FormThemTaiKhoan()
         {
             InitializeComponent();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormThemTaiKhoan_Load(object sender, EventArgs e)
         {
             try
             {
-                var listGioiTinh = gtsv.GetAll();
                 var listTaiKhoan = tksv.GetAll();
-                FillGenderComboBox(listGioiTinh);
                 BindgridN(listTaiKhoan);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void dtGVXemay_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtGVNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dtGVNV.CurrentRow.Index != -1)
+            if (dtGVNV.CurrentRow.Index != -1)
             {
                 tk.TenTK = dtGVNV.CurrentRow.Cells[0].Value.ToString();
                 using (Model1 db = new Model1())
                 {
-                    tk = db.TaiKhoans.Where( x => x.TenTK == tk.TenTK ).FirstOrDefault();
+                    tk = db.TaiKhoans.Where(x => x.TenTK == tk.TenTK).FirstOrDefault();
                     txtTenTK.Text = tk.TenTK.ToString();
                     txtMK.Text = tk.MatKhau.ToString();
                     txtFullName.Text = tk.TenNguoiDung.ToString();
                     txtSdth.Text = tk.SDT.ToString();
-                    foreach(var item in cbGioiTinh.Items)
-                    {
-                        if(((GioiTinh)item).GioiTinh1 == dtGVNV.Rows[dtGVNV.CurrentRow.Index].Cells[6].Value
-                            .ToString())
-                        {
-                            cbGioiTinh.SelectedItem = item;
-                            break;
-                        }
-                    }
+                    cbGioiTinh.Text=tk.GioiTinh.ToString();
+                    txtEmail.Text=tk.email.ToString();
                 }
             }
         }
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
                 int n = GetSelectedRow(txtTenTK.Text.ToString());
-                if (!checkValue())
+                if (Check())
                 {
-                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
-
-                }if(n == -1)
+                    string tentk = txtTenTK.Text;
+                    if (KiemTraTaiKhoanTonTai(tentk))
+                    {
+                        MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
+                    }
+                }
+                else
+                if(n == -1)
                 {
                     getValue();
                     tksv.InsertUpdate(tk);
+                    MessageBox.Show("Thêm dữ liệu thành công");
                 }
-                MessageBox.Show("Thêm dữ liệu thành công");
+                
                 clearValue();
                 BindgridN(tksv.GetAll());
-            }catch(Exception ex)
+            }
+            catch (DbEntityValidationException ex)
             {
-                MessageBox.Show(ex.Message);
+                foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in entityValidationErrors.ValidationErrors)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                    }
+                }
             }
         }
 
@@ -97,11 +97,16 @@ namespace GUi
             try
             {
                 int n = GetSelectedRow(txtTenTK.Text.ToString());
-                if (!checkValue())
+                if (Check())
                 {
-                    throw new Exception("Vui lòng nhập đủ thông tin!");
+                    string tentk = txtTenTK.Text;
+                    if (KiemTraTaiKhoanTonTai(tentk))
+                    {
+                        MessageBox.Show("Tên tài khoản đã tồn tại. Xin nhập tên tài khoản khác.");
+                    }
                 }
-                if( n != -1)
+                else
+                if ( n != -1)
                 {
                     UpdateRow(txtTenTK.Text);
                 }
@@ -125,7 +130,7 @@ namespace GUi
                     
                 }
                 ShowDialogDelete();
-                BindgridN(context.TaiKhoans.ToList());
+                BindgridN(ct.TaiKhoans.ToList());
             }
             catch(Exception ex)
             {
@@ -149,16 +154,9 @@ namespace GUi
                 dtGVNV.Rows[index].Cells[4].Value = i.SDT;
                 if (i.GioiTinh != null)
                 {
-                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh.GioiTinh1;
+                    dtGVNV.Rows[index].Cells[5].Value = i.GioiTinh;
                 }
             }
-        }
-        private void FillGenderComboBox(List<GioiTinh> accountlist)
-        {
-            accountlist.Insert(0, new GioiTinh());
-            this.cbGioiTinh.DataSource = accountlist;
-            this.cbGioiTinh.DisplayMember = "GioiTinh1";
-            this.cbGioiTinh.ValueMember = "MaGioiTinh";
         }
         private bool checkValue()
         {
@@ -174,19 +172,18 @@ namespace GUi
         }
         private void getValue()
         {
-            string selectedGender = (string)cbGioiTinh.SelectedValue;
             tk.TenTK = txtTenTK.Text;
-            tk.MatKhau = txtMK.Text;
+            tk.MatKhau = GlobalFunc.CalculateMD5Hash(txtMK.Text.Trim());
             tk.email = txtEmail.Text;
             tk.TenNguoiDung = txtFullName.Text;
             tk.SDT = txtSdth.Text;
-            tk.MaGioiTinh = selectedGender;
+            tk.GioiTinh = cbGioiTinh.Text;
         }
-        private int GetSelectedRow( string nameaccount)
+        private int GetSelectedRow(string taikhoan) //GETSELECTEDROW
         {
-            for(int i = 0; i< dtGVNV.Rows.Count; i++)
+            for (int i = 0; i < dtGVNV.Rows.Count; i++)
             {
-                if (dtGVNV.Rows[i].Cells[0].Value.ToString() == nameaccount)
+                if (dtGVNV.Rows[i].Cells[0].Value.ToString() == taikhoan)
                 {
                     return i;
                 }
@@ -197,17 +194,19 @@ namespace GUi
         {
             try
             {
-                var updating = context.TaiKhoans.Find(nameaccount);
+                var updating = ct.TaiKhoans.Find(nameaccount);
                 if(updating != null)
                 {
                     updating.TenTK = txtTenTK.Text;
-                    updating.MatKhau = txtMK.Text;
-                    var selectedUpdate = (GioiTinh)cbGioiTinh.SelectedItem;
-                    string IDGioiTinh = selectedUpdate.GioiTinh1;
-                    updating.MaGioiTinh = IDGioiTinh;
-                    context.SaveChanges();
+                    updating.TenNguoiDung=txtFullName.Text;
+                    updating.MatKhau = GlobalFunc.CalculateMD5Hash(txtMK.Text.Trim());
+                    updating.SDT = txtSdth.Text;
+                    updating.email = txtEmail.Text;
+                    updating.GioiTinh = cbGioiTinh.Text;
+                    ct.SaveChanges();
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -217,14 +216,14 @@ namespace GUi
         {
             using (var context = new Model1())
             {
-                var Deleting = context.TaiKhoans.Find(nameaccount);
+                var Deleting = ct.TaiKhoans.Find(nameaccount);
                 if(Deleting != null)
                 {
-                    context.TaiKhoans.Remove(Deleting);
-                    context.SaveChanges();
+                    ct.TaiKhoans.Remove(Deleting);
+                    ct.SaveChanges();
                 }
             }
-            BindgridN(context.TaiKhoans.ToList());
+            BindgridN(ct.TaiKhoans.ToList());
             clearValue();
         }
         private void ShowDialogDelete()
@@ -247,9 +246,59 @@ namespace GUi
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private bool Check()
         {
-            this.Hide();
+
+            if (string.IsNullOrEmpty(txtTenTK.Text) || txtTenTK.Text.Length < 6)
+            {
+                MessageBox.Show("Tên tài khoản phải chứa ít nhất 6 ký tự.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtMK.Text) || txtMK.Text.Length < 8)
+            {
+                MessageBox.Show("Mật khẩu phải chứa ít nhất 8 ký tự.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ email.");
+                return false;
+            }
+            if (!KiemTraEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Địa chỉ email không hợp lệ.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtFullName.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên người dùng.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtSdth.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại.");
+                return false;
+            }
+            return true;
+        }
+        private bool KiemTraTaiKhoanTonTai(string tentk)
+        {
+            using (var context = new Model1())
+            {
+                return context.TaiKhoans.Any(p => p.TenTK == tentk);
+            }
+        }
+        private bool KiemTraEmail(string email)
+        {
+            string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Hide();
         }
     }
 }
