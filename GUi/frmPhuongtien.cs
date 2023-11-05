@@ -297,12 +297,14 @@ namespace GUi
 
         private void txtTim_TextChanged(object sender, EventArgs e)
         {
-            if (txtTim.Text == "")
-                BindGridXeMay(pt.GetAll());
-            else
-            {
-                BindGridXeMay(pt.FindByName(txtTim.Text));
-            }
+            string searchText = txtTim.Text.Trim();
+            List<Xe> searchResults = pt.GetAll()
+                .Where(xa =>
+                    xa.MaXe.Contains(searchText) ||
+                    xa.TenXe.Contains(searchText))
+                .ToList();
+
+            BindGridXeMay(searchResults);
         }
 
         private void txtMaXe_KeyDown(object sender, KeyEventArgs e)

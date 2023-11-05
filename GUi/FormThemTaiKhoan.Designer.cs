@@ -69,6 +69,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(100, 20);
             this.txtTim.TabIndex = 48;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged_1);
             // 
             // label8
             // 

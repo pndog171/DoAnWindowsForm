@@ -300,5 +300,17 @@ namespace GUi
             if (DR == DialogResult.Yes)
                 this.Hide();
         }
+
+        private void txtTim_TextChanged_1(object sender, EventArgs e)
+        {
+            string searchText = txtTim.Text.Trim();
+            List<TaiKhoan> searchResults = tksv.GetAll()
+                .Where(xa =>
+                    xa.TenTK.Contains(searchText) ||
+                    xa.TenNguoiDung.Contains(searchText))
+                .ToList();
+
+            BindgridN(searchResults);
+        }
     }
 }

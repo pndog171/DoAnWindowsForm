@@ -274,9 +274,7 @@ namespace GUi
             List<KhachHang> searchResults = khachhangService.GetAll()
                 .Where(kh =>
                     kh.MaKH.Contains(searchText) ||
-                    kh.TenKH.Contains(searchText) ||
-                    kh.SDTKH.Contains(searchText) ||
-                    kh.CCCD.Contains(searchText))
+                    kh.TenKH.Contains(searchText))
                 .ToList();
 
             BindGridKhach(searchResults);
@@ -287,6 +285,19 @@ namespace GUi
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
                 this.Hide();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
+            var khachhangService = new Khachhang();
+            List<KhachHang> searchResults = khachhangService.GetAll()
+                .Where(kh =>
+                    kh.MaKH.Contains(searchText) ||
+                    kh.TenKH.Contains(searchText))
+                .ToList();
+
+            BindGridKhach(searchResults);
         }
     }
 }
