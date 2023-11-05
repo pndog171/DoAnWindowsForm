@@ -163,18 +163,23 @@ namespace GUi
             try
             {
                 int n = getSelectedRow(txtMaXe.Text.ToString());
+                string maxe = txtMaXe.Text;
                 if (!checkValue())
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 }
-                if (n == -1)
+                else if(KiemTraTaiMaXeTonTai(maxe))
+                {
+                     MessageBox.Show("Mã xe đã tồn tại. Xin nhập tên tài khoản khác.");
+                }
+                else if (n == -1)
                 {
                     getValue();
                     pt.InsertUpdate(xe);
+                    MessageBox.Show("Thêm xe thành công");
+                    clearValue();
+                    BindGridXeMay(pt.GetAll());
                 }
-                MessageBox.Show("Thêm xe thành công");
-                clearValue();
-                BindGridXeMay(pt.GetAll());
             }
             catch (Exception ex)
             {
@@ -419,6 +424,13 @@ namespace GUi
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private bool KiemTraTaiMaXeTonTai(string maxe)
+        {
+            using (var context = new Model1())
+            {
+                return context.Xes.Any(p => p.MaXe == maxe);
             }
         }
 

@@ -53,11 +53,11 @@ namespace GUi
             this.cbbTenXe.DisplayMember = "TenXe";
             this.cbbTenXe.ValueMember = "MaXe";
         }
-        private bool KiemTraMaHDTonTai(string makh)
+        private bool KiemTraMaHDTonTai(string mahd)
         {
             using (var context = new Model1())
             {
-                return context.HoaDons.Any(p => p.MaKH == makh);
+                return context.HoaDons.Any(p => p.MaHD == mahd);
             }
         }
         private void updateRowTT(string maxe) //UPDATEROW 
@@ -154,11 +154,19 @@ namespace GUi
             {
                 if (checkValue() == true)
                 {
+                    string mhd = txtHoaDon.Text;
+                    if (KiemTraMaHDTonTai(mhd))
+                    {
+                        MessageBox.Show("Mã hóa đơn đã tồn tại. Xin nhập tên tài khoản khác.");
+                    }
+                    else
+                    {
                         updateRowTT((string)cbbTenXe.SelectedValue);
                         TinhTien();
                         getValue();
                         hdService.InsertUpdate(model);
                         MessageBox.Show("Lưu thành công!");
+                    }
                 }
                 else throw new Exception("vui lòng nhập đầy đủ thông tin!");
             }
