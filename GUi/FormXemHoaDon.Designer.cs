@@ -28,41 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvXemHD = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemHD)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvXemHD
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvXemHD.BackgroundColor = System.Drawing.Color.White;
+            this.dgvXemHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXemHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column11,
             this.Column6,
             this.Column5,
             this.Column7,
-            this.Column8,
-            this.Column9,
             this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1024, 452);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvXemHD.Location = new System.Drawing.Point(1, 0);
+            this.dgvXemHD.Name = "dgvXemHD";
+            this.dgvXemHD.Size = new System.Drawing.Size(844, 335);
+            this.dgvXemHD.TabIndex = 0;
             // 
             // Column1
             // 
@@ -86,12 +80,6 @@
             this.Column4.HeaderText = "Ngày trả xe";
             this.Column4.Name = "Column4";
             // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Số ngày thuê";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 50;
-            // 
             // Column6
             // 
             this.Column6.HeaderText = "Ngày xuất hóa đơn";
@@ -108,18 +96,6 @@
             this.Column7.Name = "Column7";
             this.Column7.Width = 90;
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Giá";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 85;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "VAT";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 50;
-            // 
             // Column10
             // 
             this.Column10.HeaderText = "Tổng tiền";
@@ -130,28 +106,26 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(848, 337);
+            this.Controls.Add(this.dgvXemHD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormXemHoaDon";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormXemHoaDon_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemHD)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvXemHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

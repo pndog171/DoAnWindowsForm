@@ -346,7 +346,6 @@
             this.txtHoaDon.Name = "txtHoaDon";
             this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
             this.txtHoaDon.TabIndex = 0;
-            this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
             // 
             // label14
             // 
@@ -385,6 +384,7 @@
             this.btnxemhoadon.Size = new System.Drawing.Size(36, 39);
             this.btnxemhoadon.TabIndex = 5;
             this.btnxemhoadon.UseVisualStyleBackColor = false;
+            this.btnxemhoadon.Click += new System.EventHandler(this.btnxemhoadon_Click);
             // 
             // btnInHD
             // 

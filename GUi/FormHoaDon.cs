@@ -53,12 +53,13 @@ namespace GUi
             this.cbbTenXe.DisplayMember = "TenXe";
             this.cbbTenXe.ValueMember = "MaXe";
         }
-
-        private void txtHoaDon_EditValueChanged(object sender, EventArgs e)
+        private bool KiemTraMaHDTonTai(string makh)
         {
-
+            using (var context = new Model1())
+            {
+                return context.HoaDons.Any(p => p.MaKH == makh);
+            }
         }
-
         private void updateRowTT(string maxe) //UPDATEROW 
         {
             try
@@ -153,11 +154,11 @@ namespace GUi
             {
                 if (checkValue() == true)
                 {
-                    updateRowTT((string)cbbTenXe.SelectedValue);
-                    TinhTien();
-                    getValue();
-                    hdService.InsertUpdate(model);
-                    MessageBox.Show("Lưu thành công!");
+                        updateRowTT((string)cbbTenXe.SelectedValue);
+                        TinhTien();
+                        getValue();
+                        hdService.InsertUpdate(model);
+                        MessageBox.Show("Lưu thành công!");
                 }
                 else throw new Exception("vui lòng nhập đầy đủ thông tin!");
             }
@@ -232,6 +233,12 @@ namespace GUi
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
                 this.Hide();
+        }
+
+        private void btnxemhoadon_Click(object sender, EventArgs e)
+        {
+            FormXemHoaDon frm = new FormXemHoaDon();
+            frm.ShowDialog();
         }
     }
 }
