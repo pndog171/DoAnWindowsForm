@@ -73,7 +73,7 @@
             // 
             this.cbLoaiXe.FormattingEnabled = true;
             this.cbLoaiXe.Location = new System.Drawing.Point(78, 189);
-            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiXe.Name = "cbLoaiXe";
             this.cbLoaiXe.Size = new System.Drawing.Size(92, 21);
             this.cbLoaiXe.TabIndex = 21;
@@ -133,7 +133,7 @@
             // txtDonGia
             // 
             this.txtDonGia.Location = new System.Drawing.Point(78, 239);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(76, 20);
             this.txtDonGia.TabIndex = 12;
@@ -142,7 +142,7 @@
             // txtMau
             // 
             this.txtMau.Location = new System.Drawing.Point(78, 141);
-            this.txtMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMau.Name = "txtMau";
             this.txtMau.Size = new System.Drawing.Size(76, 20);
             this.txtMau.TabIndex = 13;
@@ -151,7 +151,7 @@
             // txtTenXe
             // 
             this.txtTenXe.Location = new System.Drawing.Point(78, 94);
-            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenXe.Name = "txtTenXe";
             this.txtTenXe.Size = new System.Drawing.Size(76, 20);
             this.txtTenXe.TabIndex = 14;
@@ -160,7 +160,7 @@
             // txtMaXe
             // 
             this.txtMaXe.Location = new System.Drawing.Point(78, 52);
-            this.txtMaXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaXe.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaXe.Name = "txtMaXe";
             this.txtMaXe.Size = new System.Drawing.Size(76, 20);
             this.txtMaXe.TabIndex = 15;
@@ -178,7 +178,7 @@
             this.Column4,
             this.Column5});
             this.dtGVXemay.Location = new System.Drawing.Point(212, 108);
-            this.dtGVXemay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtGVXemay.Margin = new System.Windows.Forms.Padding(2);
             this.dtGVXemay.Name = "dtGVXemay";
             this.dtGVXemay.RowHeadersWidth = 51;
             this.dtGVXemay.RowTemplate.Height = 24;
@@ -291,7 +291,7 @@
             this.Column6,
             this.Column7});
             this.DtGVTrangThaiXe.Location = new System.Drawing.Point(7, 421);
-            this.DtGVTrangThaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtGVTrangThaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.DtGVTrangThaiXe.Name = "DtGVTrangThaiXe";
             this.DtGVTrangThaiXe.RowHeadersWidth = 51;
             this.DtGVTrangThaiXe.RowTemplate.Height = 24;
@@ -382,7 +382,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Location = new System.Drawing.Point(16, 84);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 19);
             this.btnXoa.TabIndex = 23;
@@ -395,7 +395,7 @@
             this.btnThem.BackColor = System.Drawing.Color.LightGray;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Location = new System.Drawing.Point(16, 44);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 19);
             this.btnThem.TabIndex = 22;
@@ -409,9 +409,9 @@
             this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Location = new System.Drawing.Point(911, 149);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(98, 167);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
@@ -434,8 +434,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtGVXemay);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPhuongtien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

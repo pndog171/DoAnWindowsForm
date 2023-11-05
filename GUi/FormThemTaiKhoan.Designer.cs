@@ -83,7 +83,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.Salmon;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Location = new System.Drawing.Point(21, 79);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 19);
             this.btnXoa.TabIndex = 43;
@@ -154,7 +154,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(95, 123);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(114, 20);
             this.txtEmail.TabIndex = 32;
@@ -162,7 +162,7 @@
             // txtMK
             // 
             this.txtMK.Location = new System.Drawing.Point(95, 76);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(2);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(114, 20);
             this.txtMK.TabIndex = 33;
@@ -171,7 +171,7 @@
             // txtTenTK
             // 
             this.txtTenTK.Location = new System.Drawing.Point(95, 34);
-            this.txtTenTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenTK.Name = "txtTenTK";
             this.txtTenTK.Size = new System.Drawing.Size(114, 20);
             this.txtTenTK.TabIndex = 34;
@@ -189,7 +189,7 @@
             this.Column5,
             this.Column6});
             this.dtGVNV.Location = new System.Drawing.Point(20, 49);
-            this.dtGVNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtGVNV.Margin = new System.Windows.Forms.Padding(2);
             this.dtGVNV.Name = "dtGVNV";
             this.dtGVNV.RowHeadersWidth = 51;
             this.dtGVNV.RowTemplate.Height = 24;
@@ -247,7 +247,7 @@
             "Nữ",
             "Khác"});
             this.cbGioiTinh.Location = new System.Drawing.Point(313, 123);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(111, 21);
             this.cbGioiTinh.TabIndex = 41;
@@ -255,7 +255,7 @@
             // txtSdth
             // 
             this.txtSdth.Location = new System.Drawing.Point(313, 79);
-            this.txtSdth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSdth.Margin = new System.Windows.Forms.Padding(2);
             this.txtSdth.Name = "txtSdth";
             this.txtSdth.Size = new System.Drawing.Size(111, 20);
             this.txtSdth.TabIndex = 32;
@@ -263,7 +263,7 @@
             // txtFullName
             // 
             this.txtFullName.Location = new System.Drawing.Point(313, 32);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(111, 20);
             this.txtFullName.TabIndex = 32;
@@ -285,7 +285,7 @@
             this.btnThem.BackColor = System.Drawing.Color.Silver;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Location = new System.Drawing.Point(21, 34);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 19);
             this.btnThem.TabIndex = 42;
@@ -343,7 +343,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThoat.Image = global::GUi.Properties.Resources.log_out;
             this.btnThoat.Location = new System.Drawing.Point(6, 5);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(42, 43);
             this.btnThoat.TabIndex = 43;
@@ -361,7 +361,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnThoat);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormThemTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemTaiKhoan";

@@ -80,7 +80,5 @@ namespace GUi
             FormThongTinKhachHang formThongTinKhachHang = new FormThongTinKhachHang();
             formThongTinKhachHang.ShowDialog();
         }
-    }
-
-       
+    }     
 }
