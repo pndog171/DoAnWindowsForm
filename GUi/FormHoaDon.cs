@@ -227,10 +227,11 @@ namespace GUi
             frm.ShowDialog();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Hide();
         }
-
     }
 }

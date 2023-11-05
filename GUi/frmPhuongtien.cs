@@ -290,7 +290,9 @@ namespace GUi
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Hide();
         }
 
         private void txtTim_TextChanged(object sender, EventArgs e)

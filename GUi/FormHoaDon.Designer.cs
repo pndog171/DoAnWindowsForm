@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDon));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLoaiXe = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.label13 = new System.Windows.Forms.Label();
@@ -62,12 +63,13 @@
             this.btnxemhoadon = new System.Windows.Forms.Button();
             this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.txtLoaiXe = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +117,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tạo hóa đơn mới";
+            // 
+            // txtLoaiXe
+            // 
+            this.txtLoaiXe.AcceptsReturn = true;
+            this.txtLoaiXe.AllowDrop = true;
+            this.txtLoaiXe.Enabled = false;
+            this.txtLoaiXe.Location = new System.Drawing.Point(689, 18);
+            this.txtLoaiXe.Name = "txtLoaiXe";
+            this.txtLoaiXe.Size = new System.Drawing.Size(78, 20);
+            this.txtLoaiXe.TabIndex = 26;
             // 
             // label17
             // 
@@ -392,15 +404,16 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtLoaiXe
+            // pictureBox1
             // 
-            this.txtLoaiXe.AcceptsReturn = true;
-            this.txtLoaiXe.AllowDrop = true;
-            this.txtLoaiXe.Enabled = false;
-            this.txtLoaiXe.Location = new System.Drawing.Point(689, 18);
-            this.txtLoaiXe.Name = "txtLoaiXe";
-            this.txtLoaiXe.Size = new System.Drawing.Size(78, 20);
-            this.txtLoaiXe.TabIndex = 26;
+            this.pictureBox1.Image = global::GUi.Properties.Resources.back1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormHoaDon
             // 
@@ -409,6 +422,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 370);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -427,6 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoaDon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,5 +483,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtLoaiXe;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

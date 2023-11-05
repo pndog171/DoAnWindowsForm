@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GUi
 {
-    public partial class FormMenu : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class FormMenu : DevExpress.XtraEditors.XtraForm
     {
         private readonly Phuongtien pt = new Phuongtien();
         private readonly Loaiphuongtien lpt = new Loaiphuongtien();
