@@ -69,12 +69,9 @@ namespace GUi
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-
                 this.Hide();
                 FormDangKy openfrm = new FormDangKy();
-                openfrm.ShowDialog();
-
-            
+                openfrm.ShowDialog();       
         }
 
         private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)

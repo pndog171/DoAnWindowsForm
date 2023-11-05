@@ -34,7 +34,11 @@ namespace GUi
         {
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
+            {
                 this.Hide();
+                FormDangNhap openfrm = new FormDangNhap();
+                openfrm.ShowDialog();
+            }
         }
 
         private void txtTenNguoiDung_KeyDown(object sender, KeyEventArgs e)

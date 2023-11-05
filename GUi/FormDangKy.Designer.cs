@@ -93,9 +93,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(50, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 14);
+            this.label1.Size = new System.Drawing.Size(86, 14);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Tên người dùng :";
+            this.label1.Text = "Tên người dùng:";
             // 
             // label4
             // 
@@ -103,9 +103,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(52, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 14);
+            this.label4.Size = new System.Drawing.Size(53, 14);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Mật khẩu :";
+            this.label4.Text = "Mật khẩu:";
             // 
             // txtMatKhau
             // 
@@ -142,9 +142,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(50, 256);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 14);
+            this.label5.Size = new System.Drawing.Size(34, 14);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Email :";
+            this.label5.Text = "Email:";
             // 
             // label6
             // 
@@ -152,9 +152,9 @@
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(52, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 14);
+            this.label6.Size = new System.Drawing.Size(72, 14);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Số điện thoại :";
+            this.label6.Text = "Số điện thoại:";
             // 
             // btnDangKy
             // 
@@ -175,9 +175,9 @@
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(50, 211);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 14);
+            this.label7.Size = new System.Drawing.Size(94, 14);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Nhập lại mật khẩu :";
+            this.label7.Text = "Nhập lại mật khẩu:";
             // 
             // txtSoDienThoai
             // 
@@ -252,9 +252,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(52, 122);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Giới Tính :";
+            this.label8.Text = "Giới tính:";
             // 
             // panel8
             // 
@@ -326,9 +326,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(50, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Tên Tài Khoản :";
+            this.label2.Text = "Tên tài khoản:";
             // 
             // pictureBox7
             // 
