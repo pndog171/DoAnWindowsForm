@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateNhanXe = new System.Windows.Forms.DateTimePicker();
@@ -41,6 +42,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtVAT = new DevExpress.XtraEditors.TextEdit();
+            this.txtGia = new DevExpress.XtraEditors.TextEdit();
+            this.txtTongTien = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbbTenXe = new System.Windows.Forms.ComboBox();
@@ -51,17 +55,14 @@
             this.dateXuatDon = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtHoaDon = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnxemhoadon = new System.Windows.Forms.Button();
             this.btnInHD = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTinhTien = new DevExpress.XtraEditors.SimpleButton();
-            this.txtVAT = new DevExpress.XtraEditors.TextEdit();
-            this.txtGia = new DevExpress.XtraEditors.TextEdit();
-            this.txtTongTien = new DevExpress.XtraEditors.TextEdit();
-            this.txtHoaDon = new DevExpress.XtraEditors.TextEdit();
+            this.txtLoaiXe = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVAT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
@@ -82,6 +83,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtLoaiXe);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.btnTinhTien);
             this.groupBox1.Controls.Add(this.label13);
@@ -122,6 +124,15 @@
             this.label17.Size = new System.Drawing.Size(50, 13);
             this.label17.TabIndex = 25;
             this.label17.Text = "Tính tiền";
+            // 
+            // btnTinhTien
+            // 
+            this.btnTinhTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.ImageOptions.Image")));
+            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
+            this.btnTinhTien.Name = "btnTinhTien";
+            this.btnTinhTien.Size = new System.Drawing.Size(40, 38);
+            this.btnTinhTien.TabIndex = 24;
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // label13
             // 
@@ -204,6 +215,30 @@
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Giá";
+            // 
+            // txtVAT
+            // 
+            this.txtVAT.Enabled = false;
+            this.txtVAT.Location = new System.Drawing.Point(480, 91);
+            this.txtVAT.Name = "txtVAT";
+            this.txtVAT.Size = new System.Drawing.Size(40, 20);
+            this.txtVAT.TabIndex = 14;
+            // 
+            // txtGia
+            // 
+            this.txtGia.Enabled = false;
+            this.txtGia.Location = new System.Drawing.Point(480, 54);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(160, 20);
+            this.txtGia.TabIndex = 13;
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Enabled = false;
+            this.txtTongTien.Location = new System.Drawing.Point(480, 132);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(200, 20);
+            this.txtTongTien.TabIndex = 12;
             // 
             // label7
             // 
@@ -291,6 +326,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã hóa đơn";
             // 
+            // txtHoaDon
+            // 
+            this.txtHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtHoaDon.EditValue = "HD";
+            this.txtHoaDon.Location = new System.Drawing.Point(90, 19);
+            this.txtHoaDon.Name = "txtHoaDon";
+            this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
+            this.txtHoaDon.TabIndex = 0;
+            this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -347,48 +392,15 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnTinhTien
+            // txtLoaiXe
             // 
-            this.btnTinhTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.ImageOptions.Image")));
-            this.btnTinhTien.Location = new System.Drawing.Point(480, 172);
-            this.btnTinhTien.Name = "btnTinhTien";
-            this.btnTinhTien.Size = new System.Drawing.Size(40, 38);
-            this.btnTinhTien.TabIndex = 24;
-            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
-            // 
-            // txtVAT
-            // 
-            this.txtVAT.Enabled = false;
-            this.txtVAT.Location = new System.Drawing.Point(480, 91);
-            this.txtVAT.Name = "txtVAT";
-            this.txtVAT.Size = new System.Drawing.Size(40, 20);
-            this.txtVAT.TabIndex = 14;
-            // 
-            // txtGia
-            // 
-            this.txtGia.Enabled = false;
-            this.txtGia.Location = new System.Drawing.Point(480, 54);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(160, 20);
-            this.txtGia.TabIndex = 13;
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Enabled = false;
-            this.txtTongTien.Location = new System.Drawing.Point(480, 132);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(200, 20);
-            this.txtTongTien.TabIndex = 12;
-            // 
-            // txtHoaDon
-            // 
-            this.txtHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtHoaDon.EditValue = "HD";
-            this.txtHoaDon.Location = new System.Drawing.Point(90, 19);
-            this.txtHoaDon.Name = "txtHoaDon";
-            this.txtHoaDon.Size = new System.Drawing.Size(200, 20);
-            this.txtHoaDon.TabIndex = 0;
-            this.txtHoaDon.EditValueChanged += new System.EventHandler(this.txtHoaDon_EditValueChanged);
+            this.txtLoaiXe.AcceptsReturn = true;
+            this.txtLoaiXe.AllowDrop = true;
+            this.txtLoaiXe.Enabled = false;
+            this.txtLoaiXe.Location = new System.Drawing.Point(689, 18);
+            this.txtLoaiXe.Name = "txtLoaiXe";
+            this.txtLoaiXe.Size = new System.Drawing.Size(78, 20);
+            this.txtLoaiXe.TabIndex = 26;
             // 
             // FormHoaDon
             // 
@@ -455,5 +467,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtLoaiXe;
     }
 }

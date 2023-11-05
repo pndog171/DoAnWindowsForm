@@ -48,7 +48,7 @@ namespace GUi
         {
             DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DR == DialogResult.Yes)
-                this.Close();
+               Application.Exit();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

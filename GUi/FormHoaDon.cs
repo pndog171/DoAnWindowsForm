@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using BUS.Service;
 using DAL.Entities;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors.Filtering.Templates;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -58,17 +59,37 @@ namespace GUi
 
         }
 
+        private void updateRowTT(string maxe) //UPDATEROW 
+        {
+            try
+            {
+                var xeUpdate = context.Xes.Find(maxe);
+                if (xeUpdate != null)
+                {
+                    xeUpdate.Status = true;
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
             try
             {
                 var listKhachhang = khService.GetAll();
-                var listPhuongtien = ptService.GetAll();
+                var listPhuongtien = ptService.CheckStatus(false);
                 var listTaikhoan = tkService.GetAll();
                 FillKhachHangCombobox(listKhachhang);
                 FillNhanVienCombobox(listTaikhoan);
-                FillXeCombobox(listPhuongtien);
-               // txtSoNgayThue.Text = defaultValue;
+                List<Xe> searchResults = ptService.GetAll()
+                    .Where(xe =>
+                        xe.Status==false)
+                    .ToList();
+                FillXeCombobox(searchResults);
             }
             catch (Exception ex)
             {
@@ -97,12 +118,10 @@ namespace GUi
             {
                 Xe selectedXe = (Xe)cbbTenXe.SelectedItem;
                 txtGia.Text = selectedXe.DonGia.ToString();
+                txtLoaiXe.Text = selectedXe.LoaiXe.TenLoai.ToString();
                 if (selectedXe.MaLoai == "1")
                     txtVAT.Text = ("5");
                 else txtVAT.Text = ("10");
-
-                //nhanVienService.FindById(selectedNhanVien.MaNhanVien);
-                //txtKhachHang.Text = ...
             }
         }
 
@@ -134,13 +153,13 @@ namespace GUi
             {
                 if (checkValue() == true)
                 {
+                    updateRowTT((string)cbbTenXe.SelectedValue);
                     TinhTien();
                     getValue();
                     hdService.InsertUpdate(model);
-                    MessageBox.Show("Da update thanh cong!");
-                    clearValue();
+                    MessageBox.Show("Lưu thành công!");
                 }
-                else throw new Exception("vui long nhap day du thong tin!!");
+                else throw new Exception("vui lòng nhập đầy đủ thông tin!");
             }
             catch (Exception ex)
             {
@@ -175,11 +194,21 @@ namespace GUi
 
         private void TinhTien()
         {
-            decimal Gia = decimal.Parse(txtGia.Text);
-            decimal SNthue = decimal.Parse(txtSoNgayThue.Text);
-            decimal Tax = decimal.Parse(txtVAT.Text);
-            decimal result = Gia * SNthue * ((Tax + 100) / 100);
-            txtTongTien.Text = result.ToString();
+            Xe xe = ptService.GetAll().FirstOrDefault(p => p.MaXe == (string)cbbTenXe.SelectedValue);
+            if (xe == null)
+            {
+                MessageBox.Show("Chưa chọn xe");
+            }
+            else if (txtSoNgayThue.Text == "")
+            { MessageBox.Show("Chưa chọn số ngày thuê"); }
+            else
+            {
+                decimal Gia = decimal.Parse(txtGia.Text);
+                decimal SNthue = decimal.Parse(txtSoNgayThue.Text);
+                decimal Tax = decimal.Parse(txtVAT.Text);
+                decimal result = Gia * SNthue * ((Tax + 100) / 100);
+                txtTongTien.Text = result.ToString();
+            }
         }
 
         private void btnInHD_Click(object sender, EventArgs e)
@@ -202,5 +231,6 @@ namespace GUi
         {
             this.Hide();
         }
+
     }
 }

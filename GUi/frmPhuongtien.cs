@@ -38,7 +38,11 @@ namespace GUi
                 var listHD= hd.GetAll();
                 FillTypeofXeCombobox(listTheloai);
                 BindGridXeMay(listXe);
-                BindTrangThai(listHD);
+                List<HoaDon> searchResults = hd.GetAll()
+                    .Where(xe =>
+                        xe.Xe.Status == true)
+                    .ToList();
+                BindTrangThai(searchResults);
             }
             catch (Exception ex)
             {
@@ -161,7 +165,7 @@ namespace GUi
                 int n = getSelectedRow(txtMaXe.Text.ToString());
                 if (!checkValue())
                 {
-                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 }
                 if (n == -1)
                 {
@@ -193,11 +197,11 @@ namespace GUi
         }
         private void showDialogDelete() //BANGTHONGBAO XOA 
         {
-            DialogResult result = MessageBox.Show("Ban chac chan co muon xoa ?", "Yes/No", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn chắc chắn muốn xóa?", "Yes/No", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 delete(txtMaXe.Text);
-                MessageBox.Show("Xoa thanh cong !!!");
+                MessageBox.Show("Xóa thành công!");
             }
         }
 
@@ -208,7 +212,7 @@ namespace GUi
                 int n = getSelectedRow(txtMaXe.Text.ToString());
                 if (n == -1)
                 {
-                    throw new Exception("Khong tim thay thong tin xe!");
+                    throw new Exception("Không tìm thấy thông tin xe!");
                 }
                 showDialogDelete();
             }
@@ -266,8 +270,7 @@ namespace GUi
                 Xe xe = pt.GetAll().FirstOrDefault(p => p.MaXe == txtMaXe.Text);
                 if (xe == null)
                 {
-                    throw new Exception("Mã xe đã có vui lòng nhập mã xe khác");
-                   
+                    throw new Exception("Mã xe đã có vui lòng nhập mã xe khác");               
                 }
                 updateRow(txtMaXe.Text);
                 MessageBox.Show("Sua thong tin thanh cong");
@@ -392,9 +395,22 @@ namespace GUi
         {
             try
             {
-                updateRowTT(txtMaXe.Text);
-                MessageBox.Show("Tra xe thanh cong");          
-                BindTrangThai(hd.GetAll());
+                Xe abc = pt.GetAll().FirstOrDefault(p => p.MaXe == txtMaXe.Text);
+                if (abc == null)
+                {
+                    throw new Exception("Chưa chọn xe!");
+
+                }
+                else
+                {
+                    updateRowTT(txtMaXe.Text);
+                    MessageBox.Show("Trả xe thành công");
+                    List<HoaDon> searchResults = hd.GetAll()
+                        .Where(xe =>
+                            xe.Xe.Status == true)
+                        .ToList();
+                    BindTrangThai(searchResults);
+                }
             }
             catch (Exception ex)
             {
