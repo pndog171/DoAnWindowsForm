@@ -246,12 +246,6 @@ namespace GUi
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DR == DialogResult.Yes)
-                this.Hide();
-        }
         private bool Check()
         {
 
@@ -298,6 +292,13 @@ namespace GUi
         {
             string pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
             return Regex.IsMatch(email, pattern);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = MessageBox.Show("Bạn có muốn thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DR == DialogResult.Yes)
+                this.Hide();
         }
     }
 }
