@@ -14,6 +14,7 @@ namespace GUi
 {
     public partial class FormMenu : DevExpress.XtraEditors.XtraForm
     {
+        public string Tennv;
         private readonly Phuongtien pt = new Phuongtien();
         private readonly Loaiphuongtien lpt = new Loaiphuongtien();
         private readonly Model1 context = new Model1();
@@ -65,6 +66,7 @@ namespace GUi
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             FormHoaDon formHoaDon = new FormHoaDon();
+            formHoaDon.TenNv = Tennv;
             formHoaDon.ShowDialog();
         }
 
@@ -79,6 +81,11 @@ namespace GUi
         {
             FormThongTinKhachHang formThongTinKhachHang = new FormThongTinKhachHang();
             formThongTinKhachHang.ShowDialog();
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            lblXinChao.Text ="Xin chào, "+Tennv+".";
         }
     }     
 }

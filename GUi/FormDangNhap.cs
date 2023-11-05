@@ -49,6 +49,7 @@ namespace GUi
                 {
                     MessageBox.Show("Đăng nhập thành công!");
                     FormMenu menu = new FormMenu();
+                    menu.Tennv = txtTaiKhoan.Text;
                     this.Hide();
                     menu.ShowDialog();
                     this.Show();

@@ -50,6 +50,7 @@
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.btnXeMay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.lblXinChao = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -99,7 +100,8 @@
             this.btnHoaDon,
             this.btnThemTaiKhoan,
             this.btnThemKhachHang,
-            this.accordionControlElement6});
+            this.accordionControlElement6,
+            this.lblXinChao});
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.accordionControl1.Name = "accordionControl1";
@@ -146,7 +148,6 @@
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.btnDangXuat,
             this.btnThoat});
-            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Tuỳ chọn";
@@ -243,6 +244,12 @@
             this.btnXeMay.Text = "Xe máy";
             this.btnXeMay.Click += new System.EventHandler(this.btnXeMay_Click);
             // 
+            // lblXinChao
+            // 
+            this.lblXinChao.Name = "lblXinChao";
+            this.lblXinChao.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.lblXinChao.Text = "Element5";
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +260,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.fluentDesignFormContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -283,5 +291,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement lblXinChao;
     }
 }

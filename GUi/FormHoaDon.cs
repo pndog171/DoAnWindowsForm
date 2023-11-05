@@ -29,6 +29,7 @@ namespace GUi
         {
             InitializeComponent();
         }
+        public string TenNv;
         //combobox Ten nhan vien
         private void FillNhanVienCombobox(List<TaiKhoan> listNhanViens)
         {
@@ -85,12 +86,10 @@ namespace GUi
                 var listPhuongtien = ptService.CheckStatus(false);
                 var listTaikhoan = tkService.GetAll();
                 FillKhachHangCombobox(listKhachhang);
-                FillNhanVienCombobox(listTaikhoan);
-                List<Xe> searchResults = ptService.GetAll()
-                    .Where(xe =>
-                        xe.Status==false)
-                    .ToList();
+                List<Xe> searchResults = ptService.GetAll().Where(xe =>xe.Status==false).ToList();
                 FillXeCombobox(searchResults);
+                List<TaiKhoan> ketqua = tkService.GetAll().Where(taiKhoan => taiKhoan.TenTK==TenNv).ToList();
+                FillNhanVienCombobox(ketqua);
             }
             catch (Exception ex)
             {
@@ -247,6 +246,11 @@ namespace GUi
         {
             FormXemHoaDon frm = new FormXemHoaDon();
             frm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TenNv);
         }
     }
 }
